@@ -2,11 +2,9 @@
 import hashlib
 import time
 import json
-from datetime import timedelta
-from typing import Any
-import requests
 import logging
-import urllib.parse
+import requests
+from typing import Any  # <--- TADY BYLA TA CHYBA
 from http.cookies import SimpleCookie
 from bs4 import BeautifulSoup
 import homeassistant.util.dt as dt_util
@@ -110,12 +108,15 @@ class CudyRouter:
         prev_dev = previous_data.get(MODULE_DEVICES) if previous_data else None
         data[MODULE_DEVICES] = parse_devices(raw_dev, options and options.get(OPTIONS_DEVICELIST), prev_dev)
 
-        # 2. LAN Status & System Info
+        # 2. LAN Status
         raw_lan = await hass.async_add_executor_job(self.get, "admin/network/lan/status?detail=1")
         data[MODULE_LAN] = parse_lan_info(raw_lan)
-        data[MODULE_SYSTEM] = parse_system_info(raw_lan)
 
-        # 3. Bandwidth (eth0)
+        # 3. System Info (z plné stránky)
+        raw_system = await hass.async_add_executor_job(self.get, "admin/system/system")
+        data[MODULE_SYSTEM] = parse_system_info(raw_system)
+
+        # 4. Bandwidth
         try:
              raw_bw = await hass.async_add_executor_job(self.get, "admin/status/bandwidth?iface=eth0")
              if raw_bw:
