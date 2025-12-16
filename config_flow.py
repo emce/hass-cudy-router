@@ -7,54 +7,36 @@ from typing import Any
 import voluptuous as vol
 
 from homeassistant import config_entries
-from homeassistant.const import (
-    CONF_HOST,
-    CONF_NAME,
-    CONF_PASSWORD,
-    CONF_SCAN_INTERVAL,
-    CONF_USERNAME,
-)
-from homeassistant.core import HomeAssistant, callback
+from homeassistant.const import CONF_HOST, CONF_PASSWORD, CONF_USERNAME, CONF_SCAN_INTERVAL
+from homeassistant.core import HomeAssistant
 from homeassistant.data_entry_flow import FlowResult
-from homeassistant.exceptions import HomeAssistantError
-from homeassistant.helpers import selector
 
+from .const import DOMAIN, OPTIONS_DEVICELIST
 from .router import CudyRouter
-from .const import DOMAIN, OPTIONS_DEVICELIST, OPTIONS_PRESENCE_TIMEOUT, OPTIONS_PRESENCE_SIGNAL_CHECK
 
 _LOGGER = logging.getLogger(__name__)
 
 STEP_USER_DATA_SCHEMA = vol.Schema(
     {
-        vol.Optional(CONF_NAME): str,
-        vol.Required(CONF_HOST): str,
-        vol.Required(CONF_USERNAME): str,
+        vol.Required(CONF_HOST, default="192.168.10.1"): str,
+        vol.Required(CONF_USERNAME, default="admin"): str,
         vol.Required(CONF_PASSWORD): str,
     }
 )
 
-
-async def validate_input(hass: HomeAssistant, data: dict[str, Any]):
-    """Validate user input after configuration."""
-
+async def validate_input(hass: HomeAssistant, data: dict[str, Any]) -> dict[str, Any]:
+    """Validate the user input allows us to connect."""
     router = CudyRouter(hass, data[CONF_HOST], data[CONF_USERNAME], data[CONF_PASSWORD])
-
+    
     if not await hass.async_add_executor_job(router.authenticate):
         raise InvalidAuth
 
+    return {"title": f"Cudy Router ({data[CONF_HOST]})"}
 
 class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     """Handle a config flow for Cudy Router."""
 
     VERSION = 1
-
-    @staticmethod
-    @callback
-    def async_get_options_flow(
-        config_entry: config_entries.ConfigEntry,
-    ) -> config_entries.OptionsFlow:
-        """Define the config flow to handle options."""
-        return CudyRouterOptionsFlowHandler(config_entry)
 
     async def async_step_user(
         self, user_input: dict[str, Any] | None = None
@@ -63,107 +45,55 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         errors: dict[str, str] = {}
         if user_input is not None:
             try:
-                title = user_input[CONF_HOST]
-                if user_input.get(CONF_NAME):
-                    title = user_input[CONF_NAME]
-
-                await validate_input(self.hass, user_input)
-            except CannotConnect:
-                errors["base"] = "cannot_connect"
+                info = await validate_input(self.hass, user_input)
             except InvalidAuth:
                 errors["base"] = "invalid_auth"
             except Exception:  # pylint: disable=broad-except
                 _LOGGER.exception("Unexpected exception")
                 errors["base"] = "unknown"
             else:
-                return self.async_create_entry(title=title, data=user_input)
+                return self.async_create_entry(title=info["title"], data=user_input)
 
         return self.async_show_form(
             step_id="user", data_schema=STEP_USER_DATA_SCHEMA, errors=errors
         )
 
+    @staticmethod
+    def async_get_options_flow(
+        config_entry: config_entries.ConfigEntry,
+    ) -> config_entries.OptionsFlow:
+        """Create the options flow."""
+        return OptionsFlowHandler(config_entry)
 
-class CudyRouterOptionsFlowHandler(config_entries.OptionsFlow):
-    """Handle Cudy Router options flow.
-
-    Configures the single instance and updates the existing config entry.
-    """
+class OptionsFlowHandler(config_entries.OptionsFlow):
+    """Handle options."""
 
     def __init__(self, config_entry: config_entries.ConfigEntry) -> None:
-        """Initialize."""
+        """Initialize options flow."""
         self.config_entry = config_entry
 
     async def async_step_init(
         self, user_input: dict[str, Any] | None = None
     ) -> FlowResult:
         """Manage the options."""
-        errors: dict[str, str] = {}
-        # Don't modify existing (read-only) options -- copy and update instead
-        options = dict(self.config_entry.options)
-
         if user_input is not None:
-            logging.debug("user_input: %s", user_input)
-            device_list = user_input.get(OPTIONS_DEVICELIST) or ""
-            scan_interval = user_input.get(CONF_SCAN_INTERVAL) or 15
-            presence_timeout = user_input.get(OPTIONS_PRESENCE_TIMEOUT) or 180
-            presence_signal_check = user_input.get(OPTIONS_PRESENCE_SIGNAL_CHECK)
-            if presence_signal_check is None:
-                presence_signal_check = True
-
-            options[OPTIONS_DEVICELIST] = device_list
-            options[CONF_SCAN_INTERVAL] = scan_interval
-            options[OPTIONS_PRESENCE_TIMEOUT] = presence_timeout
-            options[OPTIONS_PRESENCE_SIGNAL_CHECK] = presence_signal_check
-
-            # Save if there's no errors, else fall through and show the form again
-            if not errors:
-                return self.async_create_entry(title="XD", data=options)
+            return self.async_create_entry(title="", data=user_input)
 
         return self.async_show_form(
             step_id="init",
             data_schema=vol.Schema(
                 {
                     vol.Optional(
-                        OPTIONS_DEVICELIST,
-                        default=options.get(OPTIONS_DEVICELIST) or "",
-                    ): str,
-                    vol.Optional(
                         CONF_SCAN_INTERVAL,
-                        default=options.get(CONF_SCAN_INTERVAL) or 15,
-                    ): selector.NumberSelector(
-                        selector.NumberSelectorConfig(
-                            mode=selector.NumberSelectorMode.BOX,
-                            unit_of_measurement="seconds",
-                            min=5,
-                            max=60 * 60,
-                            step=5,
-                        ),
-                    ),
+                        default=self.config_entry.options.get(CONF_SCAN_INTERVAL, 30),
+                    ): int,
                     vol.Optional(
-                        OPTIONS_PRESENCE_TIMEOUT,
-                        default=options.get(OPTIONS_PRESENCE_TIMEOUT, 180),
-                    ): selector.NumberSelector(
-                        selector.NumberSelectorConfig(
-                            mode=selector.NumberSelectorMode.BOX,
-                            unit_of_measurement="seconds",
-                            min=30,
-                            max=3600,
-                            step=10,
-                        ),
-                    ),
-                    vol.Optional(
-                        OPTIONS_PRESENCE_SIGNAL_CHECK,
-                        default=options.get(OPTIONS_PRESENCE_SIGNAL_CHECK, True),
-                    ): bool,
+                        OPTIONS_DEVICELIST,
+                        default=self.config_entry.options.get(OPTIONS_DEVICELIST, ""),
+                    ): str,
                 }
             ),
-            errors=errors,
         )
 
-
-class CannotConnect(HomeAssistantError):
-    """Error to indicate we cannot connect."""
-
-
-class InvalidAuth(HomeAssistantError):
+class InvalidAuth(Exception):
     """Error to indicate there is invalid auth."""

@@ -31,6 +31,7 @@ class CudyRouterDataUpdateCoordinator(DataUpdateCoordinator[dict[str, Any]]):
         self.config_entry = entry
         self.host: str = entry.data[CONF_HOST]
         self.api = api
+        # Default scan interval set to 15 seconds to catch speed updates reasonably well
         scan_interval = (entry.options and entry.options.get(CONF_SCAN_INTERVAL)) or 15
         super().__init__(
             hass,
@@ -43,6 +44,7 @@ class CudyRouterDataUpdateCoordinator(DataUpdateCoordinator[dict[str, Any]]):
         """Get the latest data from the router."""
         async with async_timeout.timeout(30):
             try:
+                # Pass self.data to enable speed calculation based on history if needed in future
                 return await self.api.get_data(self.hass, self.config_entry.options, self.data)
             except Exception as err:
                 raise UpdateFailed from err
