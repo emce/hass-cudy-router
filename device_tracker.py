@@ -43,20 +43,17 @@ class CudyRouterDeviceTracker(CoordinatorEntity, TrackerEntity):
             "manufacturer": "Cudy",
             "name": "Cudy Router",
         }
-        self._attr_should_poll = False  # Explicitly tell HA not to poll
-        self._attr_available = True     # Mark entity as available by default
+        self._attr_should_poll = False
+        self._attr_available = True
 
     @property
     def is_connected(self) -> bool:
         """Return true if the device is connected: Wired or has a valid signal."""
         devices = self.coordinator.data.get(MODULE_DEVICES, [])
-        # Odstraneno nadmerne logovani pro produkcni pouziti, pokud chcete debugovat, odkomentujte
-        # _LOGGER.warning("[CudyRouterDeviceTracker] Devices in coordinator: %s", devices)
         for dev in devices:
             if isinstance(dev, dict) and dev.get("mac") and dev["mac"].lower() == self._mac.lower():
                 connection = dev.get("connection", "").lower()
                 signal = dev.get("signal")
-                # Connected if Wired, or signal is present and not empty or '---'
                 if connection == "wired":
                     return True
                 if signal and str(signal).strip() != "" and str(signal).strip() != "---":

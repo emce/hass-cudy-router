@@ -6,7 +6,6 @@ CONF_USERNAME = "username"
 CONF_PASSWORD = "password"
 CONF_SCAN_INTERVAL = "scan_interval"
 
-# Modules keys for data storage
 MODULE_MODEM = "modem"
 MODULE_DEVICES = "devices"
 MODULE_LAN = "lan"

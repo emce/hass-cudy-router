@@ -91,21 +91,17 @@ class CudyRouter:
     async def get_data(self, hass, options: dict[str, Any], previous_data: dict[str, Any] = None) -> dict[str, Any]:
         data = {}
 
-        # 1. System Info (Potřebujeme jako první pro identifikaci modelu)
         raw_system = await hass.async_add_executor_job(self.get, "admin/system/system")
         data[MODULE_SYSTEM] = parse_system_info(raw_system)
         hw_version = data[MODULE_SYSTEM].get("hardware", "")
 
-        # 2. Connected Devices
         raw_dev = await hass.async_add_executor_job(self.get, "admin/network/devices/devlist?detail=1")
         prev_dev = previous_data.get(MODULE_DEVICES) if previous_data else None
         data[MODULE_DEVICES] = parse_devices(raw_dev, options.get(OPTIONS_DEVICELIST) if options else None, prev_dev)
 
-        # 3. LAN Status
         raw_lan = await hass.async_add_executor_job(self.get, "admin/network/lan/status?detail=1")
         data[MODULE_LAN] = parse_lan_info(raw_lan)
 
-        # 4. Bandwidth (Předáváme hw_version)
         try:
              raw_bw = await hass.async_add_executor_job(self.get, "admin/status/bandwidth?iface=eth0")
              if raw_bw:

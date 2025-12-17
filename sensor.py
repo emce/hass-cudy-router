@@ -22,7 +22,6 @@ class CudySensorEntityDescription(SensorEntityDescription):
     value_fn: Callable[[dict], Any] = None
 
 SENSOR_TYPES: tuple[CudySensorEntityDescription, ...] = (
-    # Bandwidth
     CudySensorEntityDescription(
         key="eth0_download_speed", name="Download Speed", module=MODULE_BANDWIDTH,
         native_unit_of_measurement=UnitOfDataRate.MEGABITS_PER_SECOND,
@@ -58,7 +57,6 @@ SENSOR_TYPES: tuple[CudySensorEntityDescription, ...] = (
         icon="mdi:server", entity_category=EntityCategory.DIAGNOSTIC,
         value_fn=lambda data: data.get("hardware"),
     ),
-    # LAN
     CudySensorEntityDescription(
         key="lan_ip", name="LAN IP Address", module=MODULE_LAN,
         icon="mdi:ip-network", entity_category=EntityCategory.DIAGNOSTIC,
@@ -69,7 +67,6 @@ SENSOR_TYPES: tuple[CudySensorEntityDescription, ...] = (
         icon="mdi:clock-check", entity_category=EntityCategory.DIAGNOSTIC,
         value_fn=lambda data: data.get("connected_time"),
     ),
-    # Devices
     CudySensorEntityDescription(
         key="top_downloader_hostname", name="Top Downloader", module=MODULE_DEVICES,
         icon="mdi:arrow-down-bold-circle",

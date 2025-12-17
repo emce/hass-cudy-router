@@ -10,7 +10,7 @@ from .const import SECTION_DETAILED, MODULE_LAN, MODULE_BANDWIDTH, MODULE_SYSTEM
 _LOGGER = logging.getLogger(__name__)
 
 def _get_clean_text(element) -> str:
-    """Pomocná funkce pro odstranění duplicitního textu."""
+    """Remove duplicity text"""
     if element is None:
         return "Unknown"
     p_tag = element.find("p")
@@ -28,13 +28,11 @@ def parse_speed(input_string: str) -> float:
     if not input_string:
         return 0.0
         
-    # Odstranění duplicitního textu (mobilní bug u Cudy)
     if len(input_string) > 1 and len(input_string) % 2 == 0:
         mid = len(input_string) // 2
         if input_string[:mid] == input_string[mid:]:
             input_string = input_string[:mid]
 
-    # Regex najde číslo a jednotku (kbps, mbps, b/s, kb/s atd.)
     match = re.search(r"(\d+(?:\.\d+)?)\s*([kKmMgG]?)([bB])(?:ps|/s)?", input_string, re.IGNORECASE)
     if match:
         try:
@@ -42,16 +40,13 @@ def parse_speed(input_string: str) -> float:
             prefix = match.group(2).lower()
             unit_is_byte = match.group(3) == 'B' # 'B' = Byte, 'b' = bit
             
-            # Převedeme vše na základní jednotku (bps nebo B/s)
             if prefix == 'k': value *= 1000  # Pozor: u síťových rychlostí je k=1000, ne 1024
             elif prefix == 'm': value *= 1000000
             elif prefix == 'g': value *= 1000000000
             
-            # Pokud jsou to Bajty (B/s), převedeme na bity (bps)
             if unit_is_byte:
                 value *= 8
                 
-            # Výsledek chceme v Mbps (vydělíme milionem)
             return round(value / 1000000.0, 2)
         except ValueError:
             pass
@@ -95,21 +90,15 @@ def parse_bandwidth_json(json_data: list, hw_version: str = "") -> dict[str, Any
         is_ax = "WR3000" in (hw_version or "")
 
         if is_ax:
-            # AX3000: Data v JSONu jsou u eth0 velmi podhodnocená (PPE offload)
-            # Rozdíl 3000 při 550Mbps znamená, že 1 jednotka = cca 183 Kbit
             raw_rx_diff = last[3] - prev[3]
             raw_tx_diff = last[4] - prev[4]
             
-            # Přepočet: (diff * 8 * korekce) / (čas * 1000) -> Mbps
-            # Korekce 45-50 se zdá být u WR3000 standardní pro zobrazení PPE provozu
             rx_mbps = round((raw_rx_diff * 8 * 45) / (delta_t * 1000), 2)
             tx_mbps = round((raw_tx_diff * 8 * 45) / (delta_t * 1000), 2)
             
-            # Totals v GB (předpokládáme, že total čítač v JSONu odpovídá MB)
             total_rx_gb = round(last[3] / 1024, 2)
             total_tx_gb = round(last[4] / 1024, 2)
         else:
-            # AC1200: Čisté Bajty
             raw_rx_diff = last[1] - prev[1]
             raw_tx_diff = last[3] - prev[3]
             rx_mbps = round((raw_rx_diff * 8) / (delta_t * 1000000.0), 2)
