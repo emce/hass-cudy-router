@@ -1,27 +1,25 @@
-# Cudy Router Integration for Home Assistant (AC1200 Optimized)
+# Cudy Router Integration for Home Assistant (Universal AC/AX)
 
-This is an enhanced custom integration for Cudy routers, specifically optimized and tested for the **Cudy AC1200 (WR1200)** model. 
+This is an enhanced custom integration for Cudy routers, specifically optimized and tested for **AC1200 (WR1200)** and **AX3000 (WR3000)** models. 
 
-While based on original work for the WR3600, this version features a completely rewritten `parser.py` to handle the specific HTML structure of AC1200 firmware and introduces several new dedicated sensors for better network monitoring.
+It features a smart `parser.py` that automatically detects the hardware version and adjusts data processing (scaling factors, JSON indexes, and HTML parsing) to provide accurate real-time statistics regardless of the router's architecture.
 
 ## 🚀 Enhanced Features & Sensors
 
-Beyond basic device tracking, this integration now provides dedicated entities for comprehensive network analysis:
+Beyond basic device tracking, this integration provides dedicated entities for comprehensive network analysis:
 
 ### **Network Performance**
-* **Download Speed:** `sensor.download_speed` — Real-time aggregate download throughput.
-* **Upload Speed:** `sensor.upload_speed` — Real-time aggregate upload throughput.
-* **Total Data:** `sensor.download_total` & `sensor.upload_total` — Accumulative data counters since last router reboot.
+* **Dynamic Bandwidth Scaling:** Automatically detects if the router reports data in Bytes (AC series) or uses hardware-accelerated reporting (AX series).
+* **Download/Upload Speed:** Real-time aggregate throughput in Mbps.
+* **Total Data:** `sensor.download_total` & `sensor.upload_total` — Accumulative counters in GB.
 
 ### **Traffic Analysis**
-* **Top Downloader:** `sensor.top_downloader` — Identifies the device (Hostname or IP) currently consuming the most download bandwidth.
-* **Top Uploader:** `sensor.top_uploader` — Identifies the device currently consuming the most upload bandwidth.
-* **Device Count:** `sensor.device_count` — A numeric sensor showing the total number of currently connected clients.
+* **Top Downloader/Uploader:** Identifies the device currently consuming the most bandwidth.
+* **Detailed Device Tracker:** Monitoring connection type (2.4G/5G/Wired), signal strength ($dBm$), and session duration.
 
 ### **System Health & Info**
 * **Uptime:** `sensor.connected_time` — How long the router has been running.
-* **Firmware & HW:** `sensor.firmware_version` and `sensor.hardware_version` for easy version tracking.
-* **IP Info:** `sensor.lan_ip_address` — Monitoring the local gateway address.
+* **Hardware/Firmware Info:** Version tracking and LAN IP monitoring.
 
 ## 🛠 Installation
 
@@ -50,23 +48,28 @@ Beyond basic device tracking, this integration now provides dedicated entities f
 ## ⚙️ Configuration
 
 1. Navigate to **Settings** -> **Devices & Services**.
-2. Click **Add Integration**.
-3. Search for **Cudy Router**.
-4. Enter the router's IP address (default: `192.168.10.1`), username (`admin`), and password.
-5. The integration will automatically discover the router and populate all sensors.
+2. Click **Add Integration** and search for **Cudy Router**.
+3. Enter the router's IP (default: `192.168.10.1`), username, and password.
 
-## 📋 Data Attributes
-The `sensor.connected_devices` entity stores a full JSON list of clients in its attributes, allowing for advanced dashboarding (Markdown/Flex-Table):
-* `hostname`: The name assigned to the device.
-* `ip`: Current local IP address.
-* `mac`: Unique hardware address.
-* `connection`: Connection type (`wired` or `wireless`).
-* `signal`: Wireless signal strength percentage.
-* `online_time`: Session duration.
+## 📋 Dashboard Example (Wireless Clients)
+To create a clean list of wireless devices (filtering out wired ones and avoiding duplicate IPs in the name), use a **Markdown Card**:
 
-## ⚠️ Notes for AC1200 Users
-The AC1200 model is a standard Wi-Fi router. Therefore, LTE-specific sensors (SIM status, 4G signal strength, Cell bands) are intentionally disabled or unavailable to keep your entity list clean.
+```yaml
+type: markdown
+title: Cudy Wireless Clients
+content: >-
+  | Zařízení | Typ | Signál | Čas |
+  | :--- | :--- | :--- | :--- |
+  {% for device in state_attr('sensor.connected_devices', 'devices') if device.connection != 'Wired' -%}
+  | **{{ device.hostname }}**{% if device.hostname != device.ip %}<br><small>{{ device.ip }}</small>{% endif %} | {{ device.connection }} | {{ device.signal }} | {{ device.online_time }} |
+  {% endfor %}
+```
 
-## Credits
-Based on the original work by [armendkadrija](https://github.com/armendkadrija/hass-cudy-router-wr3600).
-Optimized for AC1200 HTML parsing and extended sensor support.
+## ⚠️ Model Specific Notes
+
+* AX3000 (WR3000): Uses specific scaling factors to compensate for PPE hardware offload reporting.
+* AC1200 (WR1200): Standardized Byte-level HTML/JSON parsing.
+* LTE-specific sensors (SIM, 4G signal) are automatically hidden for standard Wi-Fi models to keep your entity list clean.
+
+##  Credits
+Based on the original work by [armendkadrija](https://github.com/armendkadrija/hass-cudy-router-wr3600). Enhanced with universal AC/AX parsing and advanced traffic sensors.
