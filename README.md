@@ -56,13 +56,15 @@ To create a clean list of wireless devices (filtering out wired ones and avoidin
 
 ```yaml
 type: markdown
-title: Cudy Wireless Clients
-content: >-
-  | Zařízení | Typ | Signál | Čas |
+content: |-
+  | Zařízení (IP) | Typ | Signál | Čas |
   | :--- | :--- | :--- | :--- |
-  {% for device in state_attr('sensor.connected_devices', 'devices') if device.connection != 'Wired' -%}
-  | **{{ device.hostname }}**{% if device.hostname != device.ip %}<br><small>{{ device.ip }}</small>{% endif %} | {{ device.connection }} | {{ device.signal }} | {{ device.online_time }} |
-  {% endfor %}
+  {% for device in state_attr('sensor.connected_devices', 'devices') -%}
+    {%- if device.connection != 'Wired' -%}
+    | **{{ device.hostname }}** | {{ device.connection }} | {{ device.signal }} | {{ device.online_time }} |
+    {% endif -%}
+  {%- endfor %}
+title: Cudy AP Kidsroom
 ```
 
 ## ⚠️ Model Specific Notes

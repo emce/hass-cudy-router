@@ -25,18 +25,28 @@ Each device in the list includes:
 
 ```yaml
 type: markdown
-content: >
-  | Zařízení (IP) | MAC Adresa | Typ | Signál | Čas |
-
-  | :--- | :--- | :--- | :--- | :---  |
-
+content: |-
+  | Zařízení (IP) | Typ | Signál | Čas |
+  | :--- | :--- | :--- | :--- |
   {% for device in state_attr('sensor.connected_devices', 'devices') -%}
+    {%- if device.connection != 'Wired' -%}
+    | **{{ device.hostname }}** | {{ device.connection }} | {{ device.signal }} | {{ device.online_time }} |
+    {% endif -%}
+  {%- endfor %}
+title: Cudy AP Kidsroom
 
-  | **{{ device.hostname }}** | {{ device.mac }} | {{ device.connection }} | {{
-  device.signal }} | {{ device.online_time }} |
+```
 
-  {% endfor %}
-title: Seznam připojených zařízení Cudy
+```yaml
+type: markdown
+content: |-
+  | Zařízení (IP) | Typ | Signál | Čas |
+  | :--- | :--- | :--- | :--- |
+  {% for device in state_attr('sensor.connected_devices', 'devices') -%}
+    | **{{ device.hostname }}** | {{ device.connection }} | {{ device.signal }} | {{ device.online_time }} |
+    {% endif -%}
+  {%- endfor %}
+title: Cudy AP Kidsroom
 
 ```
 
