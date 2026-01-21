@@ -1,0 +1,42 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Urządzenie jest już skonfigurowane"
+        },
+        "error": {
+            "cannot_connect": "Nie udało się połączyć",
+            "invalid_auth": "Nieprawidłowa autoryzacja",
+            "unknown": "Nieoczekiwany błąd"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "host": "Host",
+                    "name": "Nazwa urządzenia (opcjonalnie)",
+                    "password": "Hasło",
+                    "username": "Nazwa użytkownika"
+                },
+                "title": "Dodaj nowy router"
+            }
+        }
+    },
+    "options": {
+        "error": {
+            "cannot_connect": "Nie udało się połączyć",
+            "invalid_auth": "Nieprawidłowa autoryzacja",
+            "unknown": "Nieoczekiwany błąd"
+        },
+        "step": {
+            "init": {
+                "data": {
+                    "device_list": "Lista urządzeń oddzielona przecinkami (MAC lub nazwa hosta) do szczegółowych raportów",
+                    "host": "Host",
+                    "password": "Hasło",
+                    "scan_interval": "Interwał skanowania",
+                    "username": "Nazwa użytkownika"
+                },
+                "title": "Skonfiguruj router"
+            }
+        }
+    }
+}
