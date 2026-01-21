@@ -1,0 +1,95 @@
+{
+  "title": "Router Cudy",
+
+  "config": {
+    "step": {
+      "user": {
+        "title": "Konfiguracja routera Cudy",
+        "description": "Wprowadź dane połączenia do routera Cudy."
+      }
+    },
+    "error": {
+      "invalid_auth": "Nieprawidłowa nazwa użytkownika lub hasło.",
+      "cannot_connect": "Nie można połączyć się z routerem.",
+      "unknown": "Wystąpił nieoczekiwany błąd."
+    }
+  },
+
+  "options": {
+    "step": {
+      "init": {
+        "title": "Opcje routera Cudy",
+        "description": "Skonfiguruj interwał odpytywania oraz śledzone urządzenia."
+      }
+    }
+  },
+
+  "entity": {
+    "sensor": {
+      "firmware_version": {
+        "name": "Wersja oprogramowania"
+      },
+      "system_uptime": {
+        "name": "Czas działania"
+      },
+      "mesh_network": {
+        "name": "Sieć mesh"
+      },
+      "mesh_units": {
+        "name": "Jednostki mesh"
+      },
+      "wan_public_ip": {
+        "name": "Publiczny adres IP WAN"
+      },
+      "wan_ip": {
+        "name": "Adres IP WAN"
+      },
+      "wan_dns": {
+        "name": "Adresy DNS WAN"
+      },
+      "wan_type": {
+        "name": "Typ połączenia"
+      },
+      "wan_uptime": {
+        "name": "Czas połączenia WAN"
+      },
+      "wan_download_speed": {
+        "name": "Prędkość pobierania WAN"
+      },
+      "wan_upload_speed": {
+        "name": "Prędkość wysyłania WAN"
+      },
+      "lan_ip": {
+        "name": "Adres IP LAN"
+      },
+      "device_count": {
+        "name": "Łączna liczba podłączonych urządzeń"
+      },
+      "wifi_24_device_count": {
+        "name": "Urządzenia Wi-Fi 2,4 GHz"
+      },
+      "wifi_5_device_count": {
+        "name": "Urządzenia Wi-Fi 5 GHz"
+      },
+      "wired_device_count": {
+        "name": "Urządzenia przewodowe"
+      },
+      "mesh_device_count": {
+        "name": "Urządzenia mesh"
+      }
+    },
+
+    "button": {
+      "reboot": {
+        "name": "Restart routera"
+      }
+    }
+  },
+
+  "services": {
+    "reboot": {
+      "name": "Restart routera",
+      "description": "Restartuje router Cudy."
+    }
+  }
+}

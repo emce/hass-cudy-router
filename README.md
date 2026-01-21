@@ -1,85 +1,144 @@
-# Cudy Router Integration for Home Assistant (Universal AC/AX)
+# Cudy Router Integration for Home Assistant (Universal AC / AX)
 
-This is an enhanced custom integration for Cudy routers, specifically optimized and tested for **AC1200 (WR1200)** and **AX3000 (WR3000)** models. 
+A modern, fully UI-configured Home Assistant integration for Cudy routers, optimized and tested primarily with **WR6500**.
 
-It features a smart `parser.py` that automatically detects the hardware version and adjusts data processing (scaling factors, JSON indexes, and HTML parsing) to provide accurate real-time statistics regardless of the router's architecture.
+The integration is designed to work across AC and AX generations by automatically detecting router capabilities and adjusting parsing, scaling, and data interpretation accordingly.
 
-## 🚀 Enhanced Features & Sensors
+WARNING:
+This is a custom integration (not part of Home Assistant Core).
+Home Assistant will display a warning about custom integrations — this is expected.
 
-Beyond basic device tracking, this integration provides dedicated entities for comprehensive network analysis:
+------------------------------------------------------------
 
-### **Network Performance**
-* **Dynamic Bandwidth Scaling:** Automatically detects if the router reports data in Bytes (AC series) or uses hardware-accelerated reporting (AX series).
-* **Download/Upload Speed:** Real-time aggregate throughput in Mbps.
-* **Total Data:** `sensor.download_total` & `sensor.upload_total` — Accumulative counters in GB.
+KEY FEATURES
 
-### **Traffic Analysis**
-* **Top Downloader/Uploader:** Identifies the device currently consuming the most bandwidth.
-* **Detailed Device Tracker:** Monitoring connection type (2.4G/5G/Wired), signal strength ($dBm$), and session duration.
+CONFIGURATION & UX
+- UI Config Flow (no YAML required)
+- Options Flow (change scan interval & tracked devices without re-adding)
+- Multi-language UI (English & Polish included)
+- Safe reboot action (button + service)
 
-### **System Health & Info**
-* **Uptime:** `sensor.connected_time` — How long the router has been running.
-* **Hardware/Firmware Info:** Version tracking and LAN IP monitoring.
+NETWORK & TRAFFIC MONITORING
+- Real-time WAN throughput (download / upload speed in Mbps)
+- Dynamic bandwidth scaling (AC vs AX models handled automatically)
+- Total traffic counters (where supported)
 
-## 🛠 Installation
+DEVICE & CLIENT INTELLIGENCE
+- Connected device counts:
+  - Total
+  - 2.4 GHz Wi-Fi
+  - 5 GHz Wi-Fi
+  - Wired
+  - Mesh
+- Detailed device tracker:
+  - Connection type (2.4G / 5G / Wired)
+  - Signal strength (dBm)
+  - Online duration
+- Optional per-device presence tracking (MAC-based)
 
-1. Open your Home Assistant `config/custom_components` directory.
-2. Create a folder named `cudy_router`.
-3. Copy all files from this repository into that folder.
-   - The structure should look like:
-     ```
-     custom_components/
-       cudy_router/
-         __init__.py
-         config_flow.py
-         const.py
-         coordinator.py
-         device_tracker.py
-         manifest.json
-         parser.py
-         router.py
-         sensor.py
-         strings.json
-         translations/
-           en.json
-     ```
-4. **Restart Home Assistant.**
+SYSTEM & ROUTER HEALTH
+- Router uptime
+- Firmware version
+- Hardware / mesh info
+- LAN & WAN IPs
+- WAN connection type & uptime
 
-## ⚙️ Configuration
+------------------------------------------------------------
 
-1. Navigate to **Settings** -> **Devices & Services**.
-2. Click **Add Integration** and search for **Cudy Router**.
-3. Enter the router's IP (default: `192.168.10.1`), username, and password.
+INSTALLATION
 
-## 📋 Dashboard Example (Wireless Clients)
-To create a clean list of wireless devices (filtering out wired ones and avoiding duplicate IPs in the name), use a **Markdown Card**:
+IMPORTANT:
+Integration domain: cudy_router
+Folder name: hass_cudy_router
 
-```yaml
-type: markdown
-content: >-
-  | Zařízení (IP) | Typ | Signál | Čas |
+MANUAL INSTALLATION
 
-  | :--- | :--- | :--- | :--- |
+1. Open Home Assistant config directory:
+   config/custom_components/
 
-  {% for device in state_attr('sensor.cudy_192_168_2_91_connected_devices_list',
-  'devices') -%}
-    {%- if device.connection != 'WIRED' -%}
-    {%- set sig = device.signal | replace(' dBm', '') | int(0) -%}
-    {%- if sig <= -85 %}{% set icon = '🔴' -%}
-    {%- elif sig <= -75 %}{% set icon = '🟠' -%}
-    {%- elif sig <= -65 %}{% set icon = '🟡' -%}
-    {%- else %}{% set icon = '🟢' %}{% endif -%}
-    | **{{ device.hostname }}** | {{ device.connection }} | {{ icon }} {{ device.signal }} | {{ device.online_time }} |
-    {% endif -%}
-  {%- endfor %}
-title: Cudy AP Kidsroom
-```
+2. Create folder:
+   hass_cudy_router/
 
-## ⚠️ Model Specific Notes
+3. Copy repository files:
 
-* AX3000 (WR3000): Uses specific scaling factors to compensate for PPE hardware offload reporting.
-* AC1200 (WR1200): Standardized Byte-level HTML/JSON parsing.
-* LTE-specific sensors (SIM, 4G signal) are automatically hidden for standard Wi-Fi models to keep your entity list clean.
+   custom_components/
+     hass_cudy_router/
+       __init__.py
+       button.py
+       config_flow.py
+       const.py
+       coordinator.py
+       device_tracker.py
+       manifest.json
+       parser.py
+       router.py
+       sensor.py
+       strings.json
+       translations/
+         en.json
+         pl.json
 
-##  Credits
-Based on the original work by [armendkadrija](https://github.com/armendkadrija/hass-cudy-router-wr3600). Enhanced with universal AC/AX parsing and advanced traffic sensors.
+4. Restart Home Assistant.
+
+------------------------------------------------------------
+
+CONFIGURATION
+
+INITIAL SETUP
+1. Settings -> Devices & Services
+2. Add Integration
+3. Search for "Cudy Router"
+4. Enter:
+   - Protocol (http / https)
+   - Router IP (default: 192.168.10.1)
+   - Username
+   - Password
+
+OPTIONS (POST-SETUP)
+After setup, click Configure on the integration to adjust:
+- Scan interval (seconds)
+- Tracked device MAC list (device_tracker)
+
+------------------------------------------------------------
+
+REBOOTING THE ROUTER
+
+BUTTON ENTITY (RECOMMENDED)
+- Entity: button.cudy_router_reboot
+- Available on the router device page
+- Manual action (safe UX)
+
+SERVICE CALL
+service: cudy_router.reboot
+
+With multiple routers:
+service: cudy_router.reboot
+data:
+  entry_id: YOUR_CONFIG_ENTRY_ID
+
+------------------------------------------------------------
+
+TRANSLATIONS
+
+Included:
+- English
+- Polish
+
+To add another language:
+1. Copy translations/en.json
+2. Rename to <lang>.json
+3. Translate values only (keys must remain unchanged)
+
+------------------------------------------------------------
+
+CREDITS
+
+Based on original work by:
+https://github.com/armendkadrija/hass-cudy-router-wr3600
+
+Extended with:
+- Universal AC / AX parsing
+- Modern Home Assistant architecture
+- UI configuration & options flow
+- Device tracker & reboot actions
+- Full automated test coverage

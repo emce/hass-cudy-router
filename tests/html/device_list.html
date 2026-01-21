@@ -1,0 +1,4866 @@
+<form class="form-horizontal" role="form" method="post" name="cbi" action="/cgi-bin/luci/admin/network/devices/devlist?detail=1" enctype="multipart/form-data" onkeydown="if(event.keyCode==13){return false;}">
+	<div>
+		<input type="hidden" name="token" value="ba05ec6e5ae3a04273ea79bcf734044f" />
+		<input type="hidden" name="timeclock" value="" />
+		<input type="hidden" name="cbi.submit" value="1" />
+		<input type="password" class="sr-only">
+	</div>
+
+<div>
+	
+	
+<!-- tblsection -->
+<div class="table-responsive">
+<table class="table table-striped">
+	<thead>
+	<tr><th class="hidden-xs">No.</th><th class="hidden-xs">Hostname</th><th class="visible-xs">Hostname</th><th class="hidden-xs"></th><th class="hidden-xs">IP / MAC Address</th><th class="hidden-xs">Real-time Rate</th><th class="hidden-xs">Signal</th><th class="hidden-xs">Duration</th><th>Internet</th><th>Operation</th></tr>
+	</thead>
+	<tbody>
+	<tr class="cbi-section-table-descr"></tr><tr id="cbi-table-1" ondragstart="drag_start(event);" ondragend="drag_end(event);" ondragenter="drag_enter(event);" ondragleave="drag_leave(event);" ondrop="drag_drop(event);" ondragover="drag_over(event);"  data-sid="1" data-store="cbi.sts.table.table">
+		<td class="hidden-xs"><div id="cbi-table-1-idx">
+
+
+
+
+	<p class="form-control-static hidden-xs">1</p>
+	<p class="visible-xs">1</p>
+
+
+</div>
+<div id="cbip-table-1-idx"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-1-hostname">
+
+
+
+
+	<p class="form-control-static hidden-xs">BroadLink-Remote...<br /><span class="text-primary">Mesh</span></p>
+	<p class="visible-xs">BroadLink-Remote...<br /><span class="text-primary">Mesh</span></p>
+
+
+</div>
+<div id="cbip-table-1-hostname"></div>
+</td>
+
+
+
+<td class="visible-xs"><div id="cbi-table-1-hostnamexs">
+
+
+
+
+	<p class="form-control-static hidden-xs">BroadLink-Remote...<br />192.168.178.15</p>
+	<p class="visible-xs">BroadLink-Remote...<br />192.168.178.15</p>
+
+
+</div>
+<div id="cbip-table-1-hostnamexs"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-1-icon">
+
+
+<div style="white-space:nowrap;"><span class="fa-2x"><i class="icon icon-none text-primary" aria-hidden="true"></i></span></div>
+</div>
+<div id="cbip-table-1-icon"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-1-ipmac">
+
+
+
+
+	<p class="form-control-static hidden-xs">192.168.178.15<br />E8:16:56:26:04:96</p>
+	<p class="visible-xs">192.168.178.15<br />E8:16:56:26:04:96</p>
+
+
+</div>
+<div id="cbip-table-1-ipmac"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-1-speed">
+
+
+
+
+	<p class="form-control-static hidden-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+	<p class="visible-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+
+
+</div>
+<div id="cbip-table-1-speed"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-1-signal">
+
+
+
+
+	<p class="form-control-static hidden-xs">-60 dBm</p>
+	<p class="visible-xs">-60 dBm</p>
+
+
+</div>
+<div id="cbip-table-1-signal"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-1-online">
+
+
+
+
+	<p class="form-control-static hidden-xs">04:38:21</p>
+	<p class="visible-xs">04:38:21</p>
+
+
+</div>
+<div id="cbip-table-1-online"></div>
+</td>
+
+
+
+<td><div id="cbi-table-1-internet">
+
+
+	<input type="hidden" value="1" name="cbi.cbe.table.1.internet" />
+	<input type="hidden" id="cbid.table.1.internet" name="cbid.table.1.internet" value="1" />
+
+	
+			<i class="fa fa-toggle-on  fa-2x text-primary" 
+			   onclick="if (this.classList.contains('fa-toggle-off')) { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=E8:16:56:26:04:96&hostname=BroadLink-Remote-26-04-96&internet=1&vpn=0&dnsfilter=1'); 
+			   	
+			   } else { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=E8:16:56:26:04:96&hostname=BroadLink-Remote-26-04-96&internet=1&vpn=0&dnsfilter=1');
+			   	
+			   }"></i>
+			
+	
+
+	<i class="fa fa-spinner fa-2x fa-pulse text-primary hidden"></i>
+</div>
+<div id="cbip-table-1-internet"></div>
+</td>
+
+
+
+<td><div id="cbi-table-1-devinfo">
+
+
+	
+		<button class="btn btn-link" type="submit" onclick='cbi_show_modal(this, "/cgi-bin/luci/admin/network/devices/devinfo", "macaddr=E8:16:56:26:04:96&hostname=BroadLink-Remote-26-04-96&internet=1&vpn=0&dnsfilter=1");return false;' name="cbid.table.1.devinfo" value="" data-action="modal"><i class="fa fa-edit fa-lg"></i></button>
+		<button class="btn hidden btn-link" type="button" disabled=true><i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;</button>
+	
+</div>
+<div id="cbip-table-1-devinfo"></div>
+</td>
+
+
+
+</tr><tr id="cbi-table-2" ondragstart="drag_start(event);" ondragend="drag_end(event);" ondragenter="drag_enter(event);" ondragleave="drag_leave(event);" ondrop="drag_drop(event);" ondragover="drag_over(event);"  data-sid="2" data-store="cbi.sts.table.table">
+		<td class="hidden-xs"><div id="cbi-table-2-idx">
+
+
+
+
+	<p class="form-control-static hidden-xs">2</p>
+	<p class="visible-xs">2</p>
+
+
+</div>
+<div id="cbip-table-2-idx"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-2-hostname">
+
+
+
+
+	<p class="form-control-static hidden-xs">HP LaserJet<br /><span class="text-primary">2.4G WiFi</span></p>
+	<p class="visible-xs">HP LaserJet<br /><span class="text-primary">2.4G WiFi</span></p>
+
+
+</div>
+<div id="cbip-table-2-hostname"></div>
+</td>
+
+
+
+<td class="visible-xs"><div id="cbi-table-2-hostnamexs">
+
+
+
+
+	<p class="form-control-static hidden-xs">HP LaserJet<br />192.168.178.23</p>
+	<p class="visible-xs">HP LaserJet<br />192.168.178.23</p>
+
+
+</div>
+<div id="cbip-table-2-hostnamexs"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-2-icon">
+
+
+<div style="white-space:nowrap;"><span class="fa-2x"><i class="icon icon-none text-primary" aria-hidden="true"></i></span></div>
+</div>
+<div id="cbip-table-2-icon"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-2-ipmac">
+
+
+
+
+	<p class="form-control-static hidden-xs">192.168.178.23<br />74:40:BB:09:97:6C</p>
+	<p class="visible-xs">192.168.178.23<br />74:40:BB:09:97:6C</p>
+
+
+</div>
+<div id="cbip-table-2-ipmac"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-2-speed">
+
+
+
+
+	<p class="form-control-static hidden-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+	<p class="visible-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+
+
+</div>
+<div id="cbip-table-2-speed"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-2-signal">
+
+
+
+
+	<p class="form-control-static hidden-xs">-42 dBm</p>
+	<p class="visible-xs">-42 dBm</p>
+
+
+</div>
+<div id="cbip-table-2-signal"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-2-online">
+
+
+
+
+	<p class="form-control-static hidden-xs">09:30:36</p>
+	<p class="visible-xs">09:30:36</p>
+
+
+</div>
+<div id="cbip-table-2-online"></div>
+</td>
+
+
+
+<td><div id="cbi-table-2-internet">
+
+
+	<input type="hidden" value="1" name="cbi.cbe.table.2.internet" />
+	<input type="hidden" id="cbid.table.2.internet" name="cbid.table.2.internet" value="1" />
+
+	
+			<i class="fa fa-toggle-on  fa-2x text-primary" 
+			   onclick="if (this.classList.contains('fa-toggle-off')) { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=74:40:BB:09:97:6C&hostname=HP%20LaserJet&internet=1&vpn=0&dnsfilter=1'); 
+			   	
+			   } else { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=74:40:BB:09:97:6C&hostname=HP%20LaserJet&internet=1&vpn=0&dnsfilter=1');
+			   	
+			   }"></i>
+			
+	
+
+	<i class="fa fa-spinner fa-2x fa-pulse text-primary hidden"></i>
+</div>
+<div id="cbip-table-2-internet"></div>
+</td>
+
+
+
+<td><div id="cbi-table-2-devinfo">
+
+
+	
+		<button class="btn btn-link" type="submit" onclick='cbi_show_modal(this, "/cgi-bin/luci/admin/network/devices/devinfo", "macaddr=74:40:BB:09:97:6C&hostname=HP%20LaserJet&internet=1&vpn=0&dnsfilter=1");return false;' name="cbid.table.2.devinfo" value="" data-action="modal"><i class="fa fa-edit fa-lg"></i></button>
+		<button class="btn hidden btn-link" type="button" disabled=true><i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;</button>
+	
+</div>
+<div id="cbip-table-2-devinfo"></div>
+</td>
+
+
+
+</tr><tr id="cbi-table-3" ondragstart="drag_start(event);" ondragend="drag_end(event);" ondragenter="drag_enter(event);" ondragleave="drag_leave(event);" ondrop="drag_drop(event);" ondragover="drag_over(event);"  data-sid="3" data-store="cbi.sts.table.table">
+		<td class="hidden-xs"><div id="cbi-table-3-idx">
+
+
+
+
+	<p class="form-control-static hidden-xs">3</p>
+	<p class="visible-xs">3</p>
+
+
+</div>
+<div id="cbip-table-3-idx"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-3-hostname">
+
+
+
+
+	<p class="form-control-static hidden-xs">rtthread<br /><span class="text-primary">Mesh</span></p>
+	<p class="visible-xs">rtthread<br /><span class="text-primary">Mesh</span></p>
+
+
+</div>
+<div id="cbip-table-3-hostname"></div>
+</td>
+
+
+
+<td class="visible-xs"><div id="cbi-table-3-hostnamexs">
+
+
+
+
+	<p class="form-control-static hidden-xs">rtthread<br />192.168.178.24</p>
+	<p class="visible-xs">rtthread<br />192.168.178.24</p>
+
+
+</div>
+<div id="cbip-table-3-hostnamexs"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-3-icon">
+
+
+<div style="white-space:nowrap;"><span class="fa-2x"><i class="icon icon-none text-primary" aria-hidden="true"></i></span></div>
+</div>
+<div id="cbip-table-3-icon"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-3-ipmac">
+
+
+
+
+	<p class="form-control-static hidden-xs">192.168.178.24<br />C8:47:8C:4E:83:56</p>
+	<p class="visible-xs">192.168.178.24<br />C8:47:8C:4E:83:56</p>
+
+
+</div>
+<div id="cbip-table-3-ipmac"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-3-speed">
+
+
+
+
+	<p class="form-control-static hidden-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+	<p class="visible-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+
+
+</div>
+<div id="cbip-table-3-speed"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-3-signal">
+
+
+
+
+	<p class="form-control-static hidden-xs">-34 dBm</p>
+	<p class="visible-xs">-34 dBm</p>
+
+
+</div>
+<div id="cbip-table-3-signal"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-3-online">
+
+
+
+
+	<p class="form-control-static hidden-xs">09:30:49</p>
+	<p class="visible-xs">09:30:49</p>
+
+
+</div>
+<div id="cbip-table-3-online"></div>
+</td>
+
+
+
+<td><div id="cbi-table-3-internet">
+
+
+	<input type="hidden" value="1" name="cbi.cbe.table.3.internet" />
+	<input type="hidden" id="cbid.table.3.internet" name="cbid.table.3.internet" value="1" />
+
+	
+			<i class="fa fa-toggle-on  fa-2x text-primary" 
+			   onclick="if (this.classList.contains('fa-toggle-off')) { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=C8:47:8C:4E:83:56&hostname=rtthread&internet=1&vpn=0&dnsfilter=1'); 
+			   	
+			   } else { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=C8:47:8C:4E:83:56&hostname=rtthread&internet=1&vpn=0&dnsfilter=1');
+			   	
+			   }"></i>
+			
+	
+
+	<i class="fa fa-spinner fa-2x fa-pulse text-primary hidden"></i>
+</div>
+<div id="cbip-table-3-internet"></div>
+</td>
+
+
+
+<td><div id="cbi-table-3-devinfo">
+
+
+	
+		<button class="btn btn-link" type="submit" onclick='cbi_show_modal(this, "/cgi-bin/luci/admin/network/devices/devinfo", "macaddr=C8:47:8C:4E:83:56&hostname=rtthread&internet=1&vpn=0&dnsfilter=1");return false;' name="cbid.table.3.devinfo" value="" data-action="modal"><i class="fa fa-edit fa-lg"></i></button>
+		<button class="btn hidden btn-link" type="button" disabled=true><i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;</button>
+	
+</div>
+<div id="cbip-table-3-devinfo"></div>
+</td>
+
+
+
+</tr><tr id="cbi-table-4" ondragstart="drag_start(event);" ondragend="drag_end(event);" ondragenter="drag_enter(event);" ondragleave="drag_leave(event);" ondrop="drag_drop(event);" ondragover="drag_over(event);"  data-sid="4" data-store="cbi.sts.table.table">
+		<td class="hidden-xs"><div id="cbi-table-4-idx">
+
+
+
+
+	<p class="form-control-static hidden-xs">4</p>
+	<p class="visible-xs">4</p>
+
+
+</div>
+<div id="cbip-table-4-idx"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-4-hostname">
+
+
+
+
+	<p class="form-control-static hidden-xs">SmartLife-9295<br /><span class="text-primary">Mesh</span></p>
+	<p class="visible-xs">SmartLife-9295<br /><span class="text-primary">Mesh</span></p>
+
+
+</div>
+<div id="cbip-table-4-hostname"></div>
+</td>
+
+
+
+<td class="visible-xs"><div id="cbi-table-4-hostnamexs">
+
+
+
+
+	<p class="form-control-static hidden-xs">SmartLife-9295<br />192.168.178.25</p>
+	<p class="visible-xs">SmartLife-9295<br />192.168.178.25</p>
+
+
+</div>
+<div id="cbip-table-4-hostnamexs"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-4-icon">
+
+
+<div style="white-space:nowrap;"><span class="fa-2x"><i class="icon icon-none text-primary" aria-hidden="true"></i></span></div>
+</div>
+<div id="cbip-table-4-icon"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-4-ipmac">
+
+
+
+
+	<p class="form-control-static hidden-xs">192.168.178.25<br />38:2C:E5:3F:92:95</p>
+	<p class="visible-xs">192.168.178.25<br />38:2C:E5:3F:92:95</p>
+
+
+</div>
+<div id="cbip-table-4-ipmac"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-4-speed">
+
+
+
+
+	<p class="form-control-static hidden-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+	<p class="visible-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+
+
+</div>
+<div id="cbip-table-4-speed"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-4-signal">
+
+
+
+
+	<p class="form-control-static hidden-xs">-80 dBm</p>
+	<p class="visible-xs">-80 dBm</p>
+
+
+</div>
+<div id="cbip-table-4-signal"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-4-online">
+
+
+
+
+	<p class="form-control-static hidden-xs">09:31:10</p>
+	<p class="visible-xs">09:31:10</p>
+
+
+</div>
+<div id="cbip-table-4-online"></div>
+</td>
+
+
+
+<td><div id="cbi-table-4-internet">
+
+
+	<input type="hidden" value="1" name="cbi.cbe.table.4.internet" />
+	<input type="hidden" id="cbid.table.4.internet" name="cbid.table.4.internet" value="1" />
+
+	
+			<i class="fa fa-toggle-on  fa-2x text-primary" 
+			   onclick="if (this.classList.contains('fa-toggle-off')) { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=38:2C:E5:3F:92:95&hostname=SmartLife-9295&internet=1&vpn=0&dnsfilter=1'); 
+			   	
+			   } else { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=38:2C:E5:3F:92:95&hostname=SmartLife-9295&internet=1&vpn=0&dnsfilter=1');
+			   	
+			   }"></i>
+			
+	
+
+	<i class="fa fa-spinner fa-2x fa-pulse text-primary hidden"></i>
+</div>
+<div id="cbip-table-4-internet"></div>
+</td>
+
+
+
+<td><div id="cbi-table-4-devinfo">
+
+
+	
+		<button class="btn btn-link" type="submit" onclick='cbi_show_modal(this, "/cgi-bin/luci/admin/network/devices/devinfo", "macaddr=38:2C:E5:3F:92:95&hostname=SmartLife-9295&internet=1&vpn=0&dnsfilter=1");return false;' name="cbid.table.4.devinfo" value="" data-action="modal"><i class="fa fa-edit fa-lg"></i></button>
+		<button class="btn hidden btn-link" type="button" disabled=true><i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;</button>
+	
+</div>
+<div id="cbip-table-4-devinfo"></div>
+</td>
+
+
+
+</tr><tr id="cbi-table-5" ondragstart="drag_start(event);" ondragend="drag_end(event);" ondragenter="drag_enter(event);" ondragleave="drag_leave(event);" ondrop="drag_drop(event);" ondragover="drag_over(event);"  data-sid="5" data-store="cbi.sts.table.table">
+		<td class="hidden-xs"><div id="cbi-table-5-idx">
+
+
+
+
+	<p class="form-control-static hidden-xs">5</p>
+	<p class="visible-xs">5</p>
+
+
+</div>
+<div id="cbip-table-5-idx"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-5-hostname">
+
+
+
+
+	<p class="form-control-static hidden-xs">Unknown<br /><span class="text-primary">5G WiFi</span></p>
+	<p class="visible-xs">Unknown<br /><span class="text-primary">5G WiFi</span></p>
+
+
+</div>
+<div id="cbip-table-5-hostname"></div>
+</td>
+
+
+
+<td class="visible-xs"><div id="cbi-table-5-hostnamexs">
+
+
+
+
+	<p class="form-control-static hidden-xs">Unknown<br />192.168.178.26</p>
+	<p class="visible-xs">Unknown<br />192.168.178.26</p>
+
+
+</div>
+<div id="cbip-table-5-hostnamexs"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-5-icon">
+
+
+<div style="white-space:nowrap;"><span class="fa-2x"><i class="icon icon-wifi6 text-primary" aria-hidden="true"></i></span></div>
+</div>
+<div id="cbip-table-5-icon"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-5-ipmac">
+
+
+
+
+	<p class="form-control-static hidden-xs">192.168.178.26<br />D6:5C:BD:90:41:22</p>
+	<p class="visible-xs">192.168.178.26<br />D6:5C:BD:90:41:22</p>
+
+
+</div>
+<div id="cbip-table-5-ipmac"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-5-speed">
+
+
+
+
+	<p class="form-control-static hidden-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+	<p class="visible-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+
+
+</div>
+<div id="cbip-table-5-speed"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-5-signal">
+
+
+
+
+	<p class="form-control-static hidden-xs">-71 dBm</p>
+	<p class="visible-xs">-71 dBm</p>
+
+
+</div>
+<div id="cbip-table-5-signal"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-5-online">
+
+
+
+
+	<p class="form-control-static hidden-xs">07:37:25</p>
+	<p class="visible-xs">07:37:25</p>
+
+
+</div>
+<div id="cbip-table-5-online"></div>
+</td>
+
+
+
+<td><div id="cbi-table-5-internet">
+
+
+	<input type="hidden" value="1" name="cbi.cbe.table.5.internet" />
+	<input type="hidden" id="cbid.table.5.internet" name="cbid.table.5.internet" value="1" />
+
+	
+			<i class="fa fa-toggle-on  fa-2x text-primary" 
+			   onclick="if (this.classList.contains('fa-toggle-off')) { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=D6:5C:BD:90:41:22&hostname=Unknown&internet=1&vpn=0&dnsfilter=1'); 
+			   	
+			   } else { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=D6:5C:BD:90:41:22&hostname=Unknown&internet=1&vpn=0&dnsfilter=1');
+			   	
+			   }"></i>
+			
+	
+
+	<i class="fa fa-spinner fa-2x fa-pulse text-primary hidden"></i>
+</div>
+<div id="cbip-table-5-internet"></div>
+</td>
+
+
+
+<td><div id="cbi-table-5-devinfo">
+
+
+	
+		<button class="btn btn-link" type="submit" onclick='cbi_show_modal(this, "/cgi-bin/luci/admin/network/devices/devinfo", "macaddr=D6:5C:BD:90:41:22&hostname=Unknown&internet=1&vpn=0&dnsfilter=1");return false;' name="cbid.table.5.devinfo" value="" data-action="modal"><i class="fa fa-edit fa-lg"></i></button>
+		<button class="btn hidden btn-link" type="button" disabled=true><i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;</button>
+	
+</div>
+<div id="cbip-table-5-devinfo"></div>
+</td>
+
+
+
+</tr><tr id="cbi-table-6" ondragstart="drag_start(event);" ondragend="drag_end(event);" ondragenter="drag_enter(event);" ondragleave="drag_leave(event);" ondrop="drag_drop(event);" ondragover="drag_over(event);"  data-sid="6" data-store="cbi.sts.table.table">
+		<td class="hidden-xs"><div id="cbi-table-6-idx">
+
+
+
+
+	<p class="form-control-static hidden-xs">6</p>
+	<p class="visible-xs">6</p>
+
+
+</div>
+<div id="cbip-table-6-idx"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-6-hostname">
+
+
+
+
+	<p class="form-control-static hidden-xs">AppleTV-4K<br /><span class="text-primary">Wired</span></p>
+	<p class="visible-xs">AppleTV-4K<br /><span class="text-primary">Wired</span></p>
+
+
+</div>
+<div id="cbip-table-6-hostname"></div>
+</td>
+
+
+
+<td class="visible-xs"><div id="cbi-table-6-hostnamexs">
+
+
+
+
+	<p class="form-control-static hidden-xs">AppleTV-4K<br />192.168.178.44</p>
+	<p class="visible-xs">AppleTV-4K<br />192.168.178.44</p>
+
+
+</div>
+<div id="cbip-table-6-hostnamexs"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-6-icon">
+
+
+<div style="white-space:nowrap;"><span class="fa-2x"><i class="icon icon-none text-primary" aria-hidden="true"></i></span></div>
+</div>
+<div id="cbip-table-6-icon"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-6-ipmac">
+
+
+
+
+	<p class="form-control-static hidden-xs">192.168.178.44<br />64:D2:C4:92:FD:0C</p>
+	<p class="visible-xs">192.168.178.44<br />64:D2:C4:92:FD:0C</p>
+
+
+</div>
+<div id="cbip-table-6-ipmac"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-6-speed">
+
+
+
+
+	<p class="form-control-static hidden-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+	<p class="visible-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+
+
+</div>
+<div id="cbip-table-6-speed"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-6-signal">
+
+
+
+
+	<p class="form-control-static hidden-xs">---</p>
+	<p class="visible-xs">---</p>
+
+
+</div>
+<div id="cbip-table-6-signal"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-6-online">
+
+
+
+
+	<p class="form-control-static hidden-xs">09:31:10</p>
+	<p class="visible-xs">09:31:10</p>
+
+
+</div>
+<div id="cbip-table-6-online"></div>
+</td>
+
+
+
+<td><div id="cbi-table-6-internet">
+
+
+	<input type="hidden" value="1" name="cbi.cbe.table.6.internet" />
+	<input type="hidden" id="cbid.table.6.internet" name="cbid.table.6.internet" value="1" />
+
+	
+			<i class="fa fa-toggle-on  fa-2x text-primary" 
+			   onclick="if (this.classList.contains('fa-toggle-off')) { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=64:D2:C4:92:FD:0C&hostname=AppleTV-4K&internet=1&vpn=0&dnsfilter=1'); 
+			   	
+			   } else { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=64:D2:C4:92:FD:0C&hostname=AppleTV-4K&internet=1&vpn=0&dnsfilter=1');
+			   	
+			   }"></i>
+			
+	
+
+	<i class="fa fa-spinner fa-2x fa-pulse text-primary hidden"></i>
+</div>
+<div id="cbip-table-6-internet"></div>
+</td>
+
+
+
+<td><div id="cbi-table-6-devinfo">
+
+
+	
+		<button class="btn btn-link" type="submit" onclick='cbi_show_modal(this, "/cgi-bin/luci/admin/network/devices/devinfo", "macaddr=64:D2:C4:92:FD:0C&hostname=AppleTV-4K&internet=1&vpn=0&dnsfilter=1");return false;' name="cbid.table.6.devinfo" value="" data-action="modal"><i class="fa fa-edit fa-lg"></i></button>
+		<button class="btn hidden btn-link" type="button" disabled=true><i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;</button>
+	
+</div>
+<div id="cbip-table-6-devinfo"></div>
+</td>
+
+
+
+</tr><tr id="cbi-table-7" ondragstart="drag_start(event);" ondragend="drag_end(event);" ondragenter="drag_enter(event);" ondragleave="drag_leave(event);" ondrop="drag_drop(event);" ondragover="drag_over(event);"  data-sid="7" data-store="cbi.sts.table.table">
+		<td class="hidden-xs"><div id="cbi-table-7-idx">
+
+
+
+
+	<p class="form-control-static hidden-xs">7</p>
+	<p class="visible-xs">7</p>
+
+
+</div>
+<div id="cbip-table-7-idx"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-7-hostname">
+
+
+
+
+	<p class="form-control-static hidden-xs">Salon<br /><span class="text-primary">5G WiFi</span></p>
+	<p class="visible-xs">Salon<br /><span class="text-primary">5G WiFi</span></p>
+
+
+</div>
+<div id="cbip-table-7-hostname"></div>
+</td>
+
+
+
+<td class="visible-xs"><div id="cbi-table-7-hostnamexs">
+
+
+
+
+	<p class="form-control-static hidden-xs">Salon<br />192.168.178.54</p>
+	<p class="visible-xs">Salon<br />192.168.178.54</p>
+
+
+</div>
+<div id="cbip-table-7-hostnamexs"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-7-icon">
+
+
+<div style="white-space:nowrap;"><span class="fa-2x"><i class="icon icon-none text-primary" aria-hidden="true"></i></span></div>
+</div>
+<div id="cbip-table-7-icon"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-7-ipmac">
+
+
+
+
+	<p class="form-control-static hidden-xs">192.168.178.54<br />58:D3:49:1B:11:C1</p>
+	<p class="visible-xs">192.168.178.54<br />58:D3:49:1B:11:C1</p>
+
+
+</div>
+<div id="cbip-table-7-ipmac"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-7-speed">
+
+
+
+
+	<p class="form-control-static hidden-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+	<p class="visible-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+
+
+</div>
+<div id="cbip-table-7-speed"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-7-signal">
+
+
+
+
+	<p class="form-control-static hidden-xs">-78 dBm</p>
+	<p class="visible-xs">-78 dBm</p>
+
+
+</div>
+<div id="cbip-table-7-signal"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-7-online">
+
+
+
+
+	<p class="form-control-static hidden-xs">01:16:06</p>
+	<p class="visible-xs">01:16:06</p>
+
+
+</div>
+<div id="cbip-table-7-online"></div>
+</td>
+
+
+
+<td><div id="cbi-table-7-internet">
+
+
+	<input type="hidden" value="1" name="cbi.cbe.table.7.internet" />
+	<input type="hidden" id="cbid.table.7.internet" name="cbid.table.7.internet" value="1" />
+
+	
+			<i class="fa fa-toggle-on  fa-2x text-primary" 
+			   onclick="if (this.classList.contains('fa-toggle-off')) { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=58:D3:49:1B:11:C1&hostname=Salon&internet=1&vpn=0&dnsfilter=1'); 
+			   	
+			   } else { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=58:D3:49:1B:11:C1&hostname=Salon&internet=1&vpn=0&dnsfilter=1');
+			   	
+			   }"></i>
+			
+	
+
+	<i class="fa fa-spinner fa-2x fa-pulse text-primary hidden"></i>
+</div>
+<div id="cbip-table-7-internet"></div>
+</td>
+
+
+
+<td><div id="cbi-table-7-devinfo">
+
+
+	
+		<button class="btn btn-link" type="submit" onclick='cbi_show_modal(this, "/cgi-bin/luci/admin/network/devices/devinfo", "macaddr=58:D3:49:1B:11:C1&hostname=Salon&internet=1&vpn=0&dnsfilter=1");return false;' name="cbid.table.7.devinfo" value="" data-action="modal"><i class="fa fa-edit fa-lg"></i></button>
+		<button class="btn hidden btn-link" type="button" disabled=true><i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;</button>
+	
+</div>
+<div id="cbip-table-7-devinfo"></div>
+</td>
+
+
+
+</tr><tr id="cbi-table-8" ondragstart="drag_start(event);" ondragend="drag_end(event);" ondragenter="drag_enter(event);" ondragleave="drag_leave(event);" ondrop="drag_drop(event);" ondragover="drag_over(event);"  data-sid="8" data-store="cbi.sts.table.table">
+		<td class="hidden-xs"><div id="cbi-table-8-idx">
+
+
+
+
+	<p class="form-control-static hidden-xs">8</p>
+	<p class="visible-xs">8</p>
+
+
+</div>
+<div id="cbip-table-8-idx"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-8-hostname">
+
+
+
+
+	<p class="form-control-static hidden-xs">audiocast<br /><span class="text-primary">Wired</span></p>
+	<p class="visible-xs">audiocast<br /><span class="text-primary">Wired</span></p>
+
+
+</div>
+<div id="cbip-table-8-hostname"></div>
+</td>
+
+
+
+<td class="visible-xs"><div id="cbi-table-8-hostnamexs">
+
+
+
+
+	<p class="form-control-static hidden-xs">audiocast<br />192.168.178.57</p>
+	<p class="visible-xs">audiocast<br />192.168.178.57</p>
+
+
+</div>
+<div id="cbip-table-8-hostnamexs"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-8-icon">
+
+
+<div style="white-space:nowrap;"><span class="fa-2x"><i class="icon icon-none text-primary" aria-hidden="true"></i></span></div>
+</div>
+<div id="cbip-table-8-icon"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-8-ipmac">
+
+
+
+
+	<p class="form-control-static hidden-xs">192.168.178.57<br />D8:AA:59:76:67:A3</p>
+	<p class="visible-xs">192.168.178.57<br />D8:AA:59:76:67:A3</p>
+
+
+</div>
+<div id="cbip-table-8-ipmac"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-8-speed">
+
+
+
+
+	<p class="form-control-static hidden-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.07 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+	<p class="visible-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.07 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+
+
+</div>
+<div id="cbip-table-8-speed"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-8-signal">
+
+
+
+
+	<p class="form-control-static hidden-xs">---</p>
+	<p class="visible-xs">---</p>
+
+
+</div>
+<div id="cbip-table-8-signal"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-8-online">
+
+
+
+
+	<p class="form-control-static hidden-xs">09:31:10</p>
+	<p class="visible-xs">09:31:10</p>
+
+
+</div>
+<div id="cbip-table-8-online"></div>
+</td>
+
+
+
+<td><div id="cbi-table-8-internet">
+
+
+	<input type="hidden" value="1" name="cbi.cbe.table.8.internet" />
+	<input type="hidden" id="cbid.table.8.internet" name="cbid.table.8.internet" value="1" />
+
+	
+			<i class="fa fa-toggle-on  fa-2x text-primary" 
+			   onclick="if (this.classList.contains('fa-toggle-off')) { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=D8:AA:59:76:67:A3&hostname=audiocast&internet=1&vpn=0&dnsfilter=1'); 
+			   	
+			   } else { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=D8:AA:59:76:67:A3&hostname=audiocast&internet=1&vpn=0&dnsfilter=1');
+			   	
+			   }"></i>
+			
+	
+
+	<i class="fa fa-spinner fa-2x fa-pulse text-primary hidden"></i>
+</div>
+<div id="cbip-table-8-internet"></div>
+</td>
+
+
+
+<td><div id="cbi-table-8-devinfo">
+
+
+	
+		<button class="btn btn-link" type="submit" onclick='cbi_show_modal(this, "/cgi-bin/luci/admin/network/devices/devinfo", "macaddr=D8:AA:59:76:67:A3&hostname=audiocast&internet=1&vpn=0&dnsfilter=1");return false;' name="cbid.table.8.devinfo" value="" data-action="modal"><i class="fa fa-edit fa-lg"></i></button>
+		<button class="btn hidden btn-link" type="button" disabled=true><i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;</button>
+	
+</div>
+<div id="cbip-table-8-devinfo"></div>
+</td>
+
+
+
+</tr><tr id="cbi-table-9" ondragstart="drag_start(event);" ondragend="drag_end(event);" ondragenter="drag_enter(event);" ondragleave="drag_leave(event);" ondrop="drag_drop(event);" ondragover="drag_over(event);"  data-sid="9" data-store="cbi.sts.table.table">
+		<td class="hidden-xs"><div id="cbi-table-9-idx">
+
+
+
+
+	<p class="form-control-static hidden-xs">9</p>
+	<p class="visible-xs">9</p>
+
+
+</div>
+<div id="cbip-table-9-idx"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-9-hostname">
+
+
+
+
+	<p class="form-control-static hidden-xs">Unknown<br /><span class="text-primary">Mesh</span></p>
+	<p class="visible-xs">Unknown<br /><span class="text-primary">Mesh</span></p>
+
+
+</div>
+<div id="cbip-table-9-hostname"></div>
+</td>
+
+
+
+<td class="visible-xs"><div id="cbi-table-9-hostnamexs">
+
+
+
+
+	<p class="form-control-static hidden-xs">Unknown<br />192.168.178.77</p>
+	<p class="visible-xs">Unknown<br />192.168.178.77</p>
+
+
+</div>
+<div id="cbip-table-9-hostnamexs"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-9-icon">
+
+
+<div style="white-space:nowrap;"><span class="fa-2x"><i class="icon icon-none text-primary" aria-hidden="true"></i></span></div>
+</div>
+<div id="cbip-table-9-icon"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-9-ipmac">
+
+
+
+
+	<p class="form-control-static hidden-xs">192.168.178.77<br />54:EF:44:3D:17:88</p>
+	<p class="visible-xs">192.168.178.77<br />54:EF:44:3D:17:88</p>
+
+
+</div>
+<div id="cbip-table-9-ipmac"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-9-speed">
+
+
+
+
+	<p class="form-control-static hidden-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+	<p class="visible-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+
+
+</div>
+<div id="cbip-table-9-speed"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-9-signal">
+
+
+
+
+	<p class="form-control-static hidden-xs">-81 dBm</p>
+	<p class="visible-xs">-81 dBm</p>
+
+
+</div>
+<div id="cbip-table-9-signal"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-9-online">
+
+
+
+
+	<p class="form-control-static hidden-xs">09:30:21</p>
+	<p class="visible-xs">09:30:21</p>
+
+
+</div>
+<div id="cbip-table-9-online"></div>
+</td>
+
+
+
+<td><div id="cbi-table-9-internet">
+
+
+	<input type="hidden" value="1" name="cbi.cbe.table.9.internet" />
+	<input type="hidden" id="cbid.table.9.internet" name="cbid.table.9.internet" value="1" />
+
+	
+			<i class="fa fa-toggle-on  fa-2x text-primary" 
+			   onclick="if (this.classList.contains('fa-toggle-off')) { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=54:EF:44:3D:17:88&hostname=Unknown&internet=1&vpn=0&dnsfilter=1'); 
+			   	
+			   } else { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=54:EF:44:3D:17:88&hostname=Unknown&internet=1&vpn=0&dnsfilter=1');
+			   	
+			   }"></i>
+			
+	
+
+	<i class="fa fa-spinner fa-2x fa-pulse text-primary hidden"></i>
+</div>
+<div id="cbip-table-9-internet"></div>
+</td>
+
+
+
+<td><div id="cbi-table-9-devinfo">
+
+
+	
+		<button class="btn btn-link" type="submit" onclick='cbi_show_modal(this, "/cgi-bin/luci/admin/network/devices/devinfo", "macaddr=54:EF:44:3D:17:88&hostname=Unknown&internet=1&vpn=0&dnsfilter=1");return false;' name="cbid.table.9.devinfo" value="" data-action="modal"><i class="fa fa-edit fa-lg"></i></button>
+		<button class="btn hidden btn-link" type="button" disabled=true><i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;</button>
+	
+</div>
+<div id="cbip-table-9-devinfo"></div>
+</td>
+
+
+
+</tr><tr id="cbi-table-10" ondragstart="drag_start(event);" ondragend="drag_end(event);" ondragenter="drag_enter(event);" ondragleave="drag_leave(event);" ondrop="drag_drop(event);" ondragover="drag_over(event);"  data-sid="10" data-store="cbi.sts.table.table">
+		<td class="hidden-xs"><div id="cbi-table-10-idx">
+
+
+
+
+	<p class="form-control-static hidden-xs">10</p>
+	<p class="visible-xs">10</p>
+
+
+</div>
+<div id="cbip-table-10-idx"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-10-hostname">
+
+
+
+
+	<p class="form-control-static hidden-xs">wlan0<br /><span class="text-primary">Mesh</span></p>
+	<p class="visible-xs">wlan0<br /><span class="text-primary">Mesh</span></p>
+
+
+</div>
+<div id="cbip-table-10-hostname"></div>
+</td>
+
+
+
+<td class="visible-xs"><div id="cbi-table-10-hostnamexs">
+
+
+
+
+	<p class="form-control-static hidden-xs">wlan0<br />192.168.178.78</p>
+	<p class="visible-xs">wlan0<br />192.168.178.78</p>
+
+
+</div>
+<div id="cbip-table-10-hostnamexs"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-10-icon">
+
+
+<div style="white-space:nowrap;"><span class="fa-2x"><i class="icon icon-none text-primary" aria-hidden="true"></i></span></div>
+</div>
+<div id="cbip-table-10-icon"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-10-ipmac">
+
+
+
+
+	<p class="form-control-static hidden-xs">192.168.178.78<br />10:D5:61:38:60:6D</p>
+	<p class="visible-xs">192.168.178.78<br />10:D5:61:38:60:6D</p>
+
+
+</div>
+<div id="cbip-table-10-ipmac"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-10-speed">
+
+
+
+
+	<p class="form-control-static hidden-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+	<p class="visible-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+
+
+</div>
+<div id="cbip-table-10-speed"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-10-signal">
+
+
+
+
+	<p class="form-control-static hidden-xs">-80 dBm</p>
+	<p class="visible-xs">-80 dBm</p>
+
+
+</div>
+<div id="cbip-table-10-signal"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-10-online">
+
+
+
+
+	<p class="form-control-static hidden-xs">09:31:06</p>
+	<p class="visible-xs">09:31:06</p>
+
+
+</div>
+<div id="cbip-table-10-online"></div>
+</td>
+
+
+
+<td><div id="cbi-table-10-internet">
+
+
+	<input type="hidden" value="1" name="cbi.cbe.table.10.internet" />
+	<input type="hidden" id="cbid.table.10.internet" name="cbid.table.10.internet" value="1" />
+
+	
+			<i class="fa fa-toggle-on  fa-2x text-primary" 
+			   onclick="if (this.classList.contains('fa-toggle-off')) { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=10:D5:61:38:60:6D&hostname=wlan0&internet=1&vpn=0&dnsfilter=1'); 
+			   	
+			   } else { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=10:D5:61:38:60:6D&hostname=wlan0&internet=1&vpn=0&dnsfilter=1');
+			   	
+			   }"></i>
+			
+	
+
+	<i class="fa fa-spinner fa-2x fa-pulse text-primary hidden"></i>
+</div>
+<div id="cbip-table-10-internet"></div>
+</td>
+
+
+
+<td><div id="cbi-table-10-devinfo">
+
+
+	
+		<button class="btn btn-link" type="submit" onclick='cbi_show_modal(this, "/cgi-bin/luci/admin/network/devices/devinfo", "macaddr=10:D5:61:38:60:6D&hostname=wlan0&internet=1&vpn=0&dnsfilter=1");return false;' name="cbid.table.10.devinfo" value="" data-action="modal"><i class="fa fa-edit fa-lg"></i></button>
+		<button class="btn hidden btn-link" type="button" disabled=true><i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;</button>
+	
+</div>
+<div id="cbip-table-10-devinfo"></div>
+</td>
+
+
+
+</tr><tr id="cbi-table-11" ondragstart="drag_start(event);" ondragend="drag_end(event);" ondragenter="drag_enter(event);" ondragleave="drag_leave(event);" ondrop="drag_drop(event);" ondragover="drag_over(event);"  data-sid="11" data-store="cbi.sts.table.table">
+		<td class="hidden-xs"><div id="cbi-table-11-idx">
+
+
+
+
+	<p class="form-control-static hidden-xs">11</p>
+	<p class="visible-xs">11</p>
+
+
+</div>
+<div id="cbip-table-11-idx"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-11-hostname">
+
+
+
+
+	<p class="form-control-static hidden-xs">BE5605880<br /><span class="text-primary">2.4G WiFi</span></p>
+	<p class="visible-xs">BE5605880<br /><span class="text-primary">2.4G WiFi</span></p>
+
+
+</div>
+<div id="cbip-table-11-hostname"></div>
+</td>
+
+
+
+<td class="visible-xs"><div id="cbi-table-11-hostnamexs">
+
+
+
+
+	<p class="form-control-static hidden-xs">BE5605880<br />192.168.178.90</p>
+	<p class="visible-xs">BE5605880<br />192.168.178.90</p>
+
+
+</div>
+<div id="cbip-table-11-hostnamexs"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-11-icon">
+
+
+<div style="white-space:nowrap;"><span class="fa-2x"><i class="icon icon-none text-primary" aria-hidden="true"></i></span></div>
+</div>
+<div id="cbip-table-11-icon"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-11-ipmac">
+
+
+
+
+	<p class="form-control-static hidden-xs">192.168.178.90<br />94:EC:13:60:C6:45</p>
+	<p class="visible-xs">192.168.178.90<br />94:EC:13:60:C6:45</p>
+
+
+</div>
+<div id="cbip-table-11-ipmac"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-11-speed">
+
+
+
+
+	<p class="form-control-static hidden-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.04 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+	<p class="visible-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.04 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+
+
+</div>
+<div id="cbip-table-11-speed"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-11-signal">
+
+
+
+
+	<p class="form-control-static hidden-xs">-48 dBm</p>
+	<p class="visible-xs">-48 dBm</p>
+
+
+</div>
+<div id="cbip-table-11-signal"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-11-online">
+
+
+
+
+	<p class="form-control-static hidden-xs">09:27:58</p>
+	<p class="visible-xs">09:27:58</p>
+
+
+</div>
+<div id="cbip-table-11-online"></div>
+</td>
+
+
+
+<td><div id="cbi-table-11-internet">
+
+
+	<input type="hidden" value="1" name="cbi.cbe.table.11.internet" />
+	<input type="hidden" id="cbid.table.11.internet" name="cbid.table.11.internet" value="1" />
+
+	
+			<i class="fa fa-toggle-on  fa-2x text-primary" 
+			   onclick="if (this.classList.contains('fa-toggle-off')) { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=94:EC:13:60:C6:45&hostname=BE5605880&internet=1&vpn=0&dnsfilter=1'); 
+			   	
+			   } else { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=94:EC:13:60:C6:45&hostname=BE5605880&internet=1&vpn=0&dnsfilter=1');
+			   	
+			   }"></i>
+			
+	
+
+	<i class="fa fa-spinner fa-2x fa-pulse text-primary hidden"></i>
+</div>
+<div id="cbip-table-11-internet"></div>
+</td>
+
+
+
+<td><div id="cbi-table-11-devinfo">
+
+
+	
+		<button class="btn btn-link" type="submit" onclick='cbi_show_modal(this, "/cgi-bin/luci/admin/network/devices/devinfo", "macaddr=94:EC:13:60:C6:45&hostname=BE5605880&internet=1&vpn=0&dnsfilter=1");return false;' name="cbid.table.11.devinfo" value="" data-action="modal"><i class="fa fa-edit fa-lg"></i></button>
+		<button class="btn hidden btn-link" type="button" disabled=true><i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;</button>
+	
+</div>
+<div id="cbip-table-11-devinfo"></div>
+</td>
+
+
+
+</tr><tr id="cbi-table-12" ondragstart="drag_start(event);" ondragend="drag_end(event);" ondragenter="drag_enter(event);" ondragleave="drag_leave(event);" ondrop="drag_drop(event);" ondragover="drag_over(event);"  data-sid="12" data-store="cbi.sts.table.table">
+		<td class="hidden-xs"><div id="cbi-table-12-idx">
+
+
+
+
+	<p class="form-control-static hidden-xs">12</p>
+	<p class="visible-xs">12</p>
+
+
+</div>
+<div id="cbip-table-12-idx"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-12-hostname">
+
+
+
+
+	<p class="form-control-static hidden-xs">ESP_E0B9AE<br /><span class="text-primary">Mesh</span></p>
+	<p class="visible-xs">ESP_E0B9AE<br /><span class="text-primary">Mesh</span></p>
+
+
+</div>
+<div id="cbip-table-12-hostname"></div>
+</td>
+
+
+
+<td class="visible-xs"><div id="cbi-table-12-hostnamexs">
+
+
+
+
+	<p class="form-control-static hidden-xs">ESP_E0B9AE<br />192.168.178.106</p>
+	<p class="visible-xs">ESP_E0B9AE<br />192.168.178.106</p>
+
+
+</div>
+<div id="cbip-table-12-hostnamexs"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-12-icon">
+
+
+<div style="white-space:nowrap;"><span class="fa-2x"><i class="icon icon-none text-primary" aria-hidden="true"></i></span></div>
+</div>
+<div id="cbip-table-12-icon"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-12-ipmac">
+
+
+
+
+	<p class="form-control-static hidden-xs">192.168.178.106<br />34:98:7A:E0:B9:AE</p>
+	<p class="visible-xs">192.168.178.106<br />34:98:7A:E0:B9:AE</p>
+
+
+</div>
+<div id="cbip-table-12-ipmac"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-12-speed">
+
+
+
+
+	<p class="form-control-static hidden-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+	<p class="visible-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+
+
+</div>
+<div id="cbip-table-12-speed"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-12-signal">
+
+
+
+
+	<p class="form-control-static hidden-xs">-46 dBm</p>
+	<p class="visible-xs">-46 dBm</p>
+
+
+</div>
+<div id="cbip-table-12-signal"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-12-online">
+
+
+
+
+	<p class="form-control-static hidden-xs">09:31:09</p>
+	<p class="visible-xs">09:31:09</p>
+
+
+</div>
+<div id="cbip-table-12-online"></div>
+</td>
+
+
+
+<td><div id="cbi-table-12-internet">
+
+
+	<input type="hidden" value="1" name="cbi.cbe.table.12.internet" />
+	<input type="hidden" id="cbid.table.12.internet" name="cbid.table.12.internet" value="1" />
+
+	
+			<i class="fa fa-toggle-on  fa-2x text-primary" 
+			   onclick="if (this.classList.contains('fa-toggle-off')) { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=34:98:7A:E0:B9:AE&hostname=ESP_E0B9AE&internet=1&vpn=0&dnsfilter=1'); 
+			   	
+			   } else { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=34:98:7A:E0:B9:AE&hostname=ESP_E0B9AE&internet=1&vpn=0&dnsfilter=1');
+			   	
+			   }"></i>
+			
+	
+
+	<i class="fa fa-spinner fa-2x fa-pulse text-primary hidden"></i>
+</div>
+<div id="cbip-table-12-internet"></div>
+</td>
+
+
+
+<td><div id="cbi-table-12-devinfo">
+
+
+	
+		<button class="btn btn-link" type="submit" onclick='cbi_show_modal(this, "/cgi-bin/luci/admin/network/devices/devinfo", "macaddr=34:98:7A:E0:B9:AE&hostname=ESP_E0B9AE&internet=1&vpn=0&dnsfilter=1");return false;' name="cbid.table.12.devinfo" value="" data-action="modal"><i class="fa fa-edit fa-lg"></i></button>
+		<button class="btn hidden btn-link" type="button" disabled=true><i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;</button>
+	
+</div>
+<div id="cbip-table-12-devinfo"></div>
+</td>
+
+
+
+</tr><tr id="cbi-table-13" ondragstart="drag_start(event);" ondragend="drag_end(event);" ondragenter="drag_enter(event);" ondragleave="drag_leave(event);" ondrop="drag_drop(event);" ondragover="drag_over(event);"  data-sid="13" data-store="cbi.sts.table.table">
+		<td class="hidden-xs"><div id="cbi-table-13-idx">
+
+
+
+
+	<p class="form-control-static hidden-xs">13</p>
+	<p class="visible-xs">13</p>
+
+
+</div>
+<div id="cbip-table-13-idx"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-13-hostname">
+
+
+
+
+	<p class="form-control-static hidden-xs">C225<br /><span class="text-primary">Mesh</span></p>
+	<p class="visible-xs">C225<br /><span class="text-primary">Mesh</span></p>
+
+
+</div>
+<div id="cbip-table-13-hostname"></div>
+</td>
+
+
+
+<td class="visible-xs"><div id="cbi-table-13-hostnamexs">
+
+
+
+
+	<p class="form-control-static hidden-xs">C225<br />192.168.178.115</p>
+	<p class="visible-xs">C225<br />192.168.178.115</p>
+
+
+</div>
+<div id="cbip-table-13-hostnamexs"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-13-icon">
+
+
+<div style="white-space:nowrap;"><span class="fa-2x"><i class="icon icon-none text-primary" aria-hidden="true"></i></span></div>
+</div>
+<div id="cbip-table-13-icon"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-13-ipmac">
+
+
+
+
+	<p class="form-control-static hidden-xs">192.168.178.115<br />EC:75:0C:DA:B9:37</p>
+	<p class="visible-xs">192.168.178.115<br />EC:75:0C:DA:B9:37</p>
+
+
+</div>
+<div id="cbip-table-13-ipmac"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-13-speed">
+
+
+
+
+	<p class="form-control-static hidden-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+	<p class="visible-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+
+
+</div>
+<div id="cbip-table-13-speed"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-13-signal">
+
+
+
+
+	<p class="form-control-static hidden-xs">-63 dBm</p>
+	<p class="visible-xs">-63 dBm</p>
+
+
+</div>
+<div id="cbip-table-13-signal"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-13-online">
+
+
+
+
+	<p class="form-control-static hidden-xs">09:31:09</p>
+	<p class="visible-xs">09:31:09</p>
+
+
+</div>
+<div id="cbip-table-13-online"></div>
+</td>
+
+
+
+<td><div id="cbi-table-13-internet">
+
+
+	<input type="hidden" value="1" name="cbi.cbe.table.13.internet" />
+	<input type="hidden" id="cbid.table.13.internet" name="cbid.table.13.internet" value="1" />
+
+	
+			<i class="fa fa-toggle-on  fa-2x text-primary" 
+			   onclick="if (this.classList.contains('fa-toggle-off')) { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=EC:75:0C:DA:B9:37&hostname=C225&internet=1&vpn=0&dnsfilter=1'); 
+			   	
+			   } else { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=EC:75:0C:DA:B9:37&hostname=C225&internet=1&vpn=0&dnsfilter=1');
+			   	
+			   }"></i>
+			
+	
+
+	<i class="fa fa-spinner fa-2x fa-pulse text-primary hidden"></i>
+</div>
+<div id="cbip-table-13-internet"></div>
+</td>
+
+
+
+<td><div id="cbi-table-13-devinfo">
+
+
+	
+		<button class="btn btn-link" type="submit" onclick='cbi_show_modal(this, "/cgi-bin/luci/admin/network/devices/devinfo", "macaddr=EC:75:0C:DA:B9:37&hostname=C225&internet=1&vpn=0&dnsfilter=1");return false;' name="cbid.table.13.devinfo" value="" data-action="modal"><i class="fa fa-edit fa-lg"></i></button>
+		<button class="btn hidden btn-link" type="button" disabled=true><i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;</button>
+	
+</div>
+<div id="cbip-table-13-devinfo"></div>
+</td>
+
+
+
+</tr><tr id="cbi-table-14" ondragstart="drag_start(event);" ondragend="drag_end(event);" ondragenter="drag_enter(event);" ondragleave="drag_leave(event);" ondrop="drag_drop(event);" ondragover="drag_over(event);"  data-sid="14" data-store="cbi.sts.table.table">
+		<td class="hidden-xs"><div id="cbi-table-14-idx">
+
+
+
+
+	<p class="form-control-static hidden-xs">14</p>
+	<p class="visible-xs">14</p>
+
+
+</div>
+<div id="cbip-table-14-idx"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-14-hostname">
+
+
+
+
+	<p class="form-control-static hidden-xs">SLZB-06P7<br /><span class="text-primary">Wired</span></p>
+	<p class="visible-xs">SLZB-06P7<br /><span class="text-primary">Wired</span></p>
+
+
+</div>
+<div id="cbip-table-14-hostname"></div>
+</td>
+
+
+
+<td class="visible-xs"><div id="cbi-table-14-hostnamexs">
+
+
+
+
+	<p class="form-control-static hidden-xs">SLZB-06P7<br />192.168.178.127</p>
+	<p class="visible-xs">SLZB-06P7<br />192.168.178.127</p>
+
+
+</div>
+<div id="cbip-table-14-hostnamexs"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-14-icon">
+
+
+<div style="white-space:nowrap;"><span class="fa-2x"><i class="icon icon-none text-primary" aria-hidden="true"></i></span></div>
+</div>
+<div id="cbip-table-14-icon"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-14-ipmac">
+
+
+
+
+	<p class="form-control-static hidden-xs">192.168.178.127<br />68:25:DD:2F:80:FB</p>
+	<p class="visible-xs">192.168.178.127<br />68:25:DD:2F:80:FB</p>
+
+
+</div>
+<div id="cbip-table-14-ipmac"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-14-speed">
+
+
+
+
+	<p class="form-control-static hidden-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+	<p class="visible-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+
+
+</div>
+<div id="cbip-table-14-speed"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-14-signal">
+
+
+
+
+	<p class="form-control-static hidden-xs">---</p>
+	<p class="visible-xs">---</p>
+
+
+</div>
+<div id="cbip-table-14-signal"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-14-online">
+
+
+
+
+	<p class="form-control-static hidden-xs">09:31:03</p>
+	<p class="visible-xs">09:31:03</p>
+
+
+</div>
+<div id="cbip-table-14-online"></div>
+</td>
+
+
+
+<td><div id="cbi-table-14-internet">
+
+
+	<input type="hidden" value="1" name="cbi.cbe.table.14.internet" />
+	<input type="hidden" id="cbid.table.14.internet" name="cbid.table.14.internet" value="1" />
+
+	
+			<i class="fa fa-toggle-on  fa-2x text-primary" 
+			   onclick="if (this.classList.contains('fa-toggle-off')) { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=68:25:DD:2F:80:FB&hostname=SLZB-06P7&internet=1&vpn=0&dnsfilter=1'); 
+			   	
+			   } else { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=68:25:DD:2F:80:FB&hostname=SLZB-06P7&internet=1&vpn=0&dnsfilter=1');
+			   	
+			   }"></i>
+			
+	
+
+	<i class="fa fa-spinner fa-2x fa-pulse text-primary hidden"></i>
+</div>
+<div id="cbip-table-14-internet"></div>
+</td>
+
+
+
+<td><div id="cbi-table-14-devinfo">
+
+
+	
+		<button class="btn btn-link" type="submit" onclick='cbi_show_modal(this, "/cgi-bin/luci/admin/network/devices/devinfo", "macaddr=68:25:DD:2F:80:FB&hostname=SLZB-06P7&internet=1&vpn=0&dnsfilter=1");return false;' name="cbid.table.14.devinfo" value="" data-action="modal"><i class="fa fa-edit fa-lg"></i></button>
+		<button class="btn hidden btn-link" type="button" disabled=true><i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;</button>
+	
+</div>
+<div id="cbip-table-14-devinfo"></div>
+</td>
+
+
+
+</tr><tr id="cbi-table-15" ondragstart="drag_start(event);" ondragend="drag_end(event);" ondragenter="drag_enter(event);" ondragleave="drag_leave(event);" ondrop="drag_drop(event);" ondragover="drag_over(event);"  data-sid="15" data-store="cbi.sts.table.table">
+		<td class="hidden-xs"><div id="cbi-table-15-idx">
+
+
+
+
+	<p class="form-control-static hidden-xs">15</p>
+	<p class="visible-xs">15</p>
+
+
+</div>
+<div id="cbip-table-15-idx"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-15-hostname">
+
+
+
+
+	<p class="form-control-static hidden-xs">Meross_Smart_Oil...<br /><span class="text-primary">Mesh</span></p>
+	<p class="visible-xs">Meross_Smart_Oil...<br /><span class="text-primary">Mesh</span></p>
+
+
+</div>
+<div id="cbip-table-15-hostname"></div>
+</td>
+
+
+
+<td class="visible-xs"><div id="cbi-table-15-hostnamexs">
+
+
+
+
+	<p class="form-control-static hidden-xs">Meross_Smart_Oil...<br />192.168.178.129</p>
+	<p class="visible-xs">Meross_Smart_Oil...<br />192.168.178.129</p>
+
+
+</div>
+<div id="cbip-table-15-hostnamexs"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-15-icon">
+
+
+<div style="white-space:nowrap;"><span class="fa-2x"><i class="icon icon-none text-primary" aria-hidden="true"></i></span></div>
+</div>
+<div id="cbip-table-15-icon"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-15-ipmac">
+
+
+
+
+	<p class="form-control-static hidden-xs">192.168.178.129<br />48:E1:E9:E0:C9:CA</p>
+	<p class="visible-xs">192.168.178.129<br />48:E1:E9:E0:C9:CA</p>
+
+
+</div>
+<div id="cbip-table-15-ipmac"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-15-speed">
+
+
+
+
+	<p class="form-control-static hidden-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+	<p class="visible-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+
+
+</div>
+<div id="cbip-table-15-speed"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-15-signal">
+
+
+
+
+	<p class="form-control-static hidden-xs">-76 dBm</p>
+	<p class="visible-xs">-76 dBm</p>
+
+
+</div>
+<div id="cbip-table-15-signal"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-15-online">
+
+
+
+
+	<p class="form-control-static hidden-xs">09:30:54</p>
+	<p class="visible-xs">09:30:54</p>
+
+
+</div>
+<div id="cbip-table-15-online"></div>
+</td>
+
+
+
+<td><div id="cbi-table-15-internet">
+
+
+	<input type="hidden" value="1" name="cbi.cbe.table.15.internet" />
+	<input type="hidden" id="cbid.table.15.internet" name="cbid.table.15.internet" value="1" />
+
+	
+			<i class="fa fa-toggle-on  fa-2x text-primary" 
+			   onclick="if (this.classList.contains('fa-toggle-off')) { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=48:E1:E9:E0:C9:CA&hostname=Meross_Smart_Oil_Difffuser&internet=1&vpn=0&dnsfilter=1'); 
+			   	
+			   } else { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=48:E1:E9:E0:C9:CA&hostname=Meross_Smart_Oil_Difffuser&internet=1&vpn=0&dnsfilter=1');
+			   	
+			   }"></i>
+			
+	
+
+	<i class="fa fa-spinner fa-2x fa-pulse text-primary hidden"></i>
+</div>
+<div id="cbip-table-15-internet"></div>
+</td>
+
+
+
+<td><div id="cbi-table-15-devinfo">
+
+
+	
+		<button class="btn btn-link" type="submit" onclick='cbi_show_modal(this, "/cgi-bin/luci/admin/network/devices/devinfo", "macaddr=48:E1:E9:E0:C9:CA&hostname=Meross_Smart_Oil_Difffuser&internet=1&vpn=0&dnsfilter=1");return false;' name="cbid.table.15.devinfo" value="" data-action="modal"><i class="fa fa-edit fa-lg"></i></button>
+		<button class="btn hidden btn-link" type="button" disabled=true><i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;</button>
+	
+</div>
+<div id="cbip-table-15-devinfo"></div>
+</td>
+
+
+
+</tr><tr id="cbi-table-16" ondragstart="drag_start(event);" ondragend="drag_end(event);" ondragenter="drag_enter(event);" ondragleave="drag_leave(event);" ondrop="drag_drop(event);" ondragover="drag_over(event);"  data-sid="16" data-store="cbi.sts.table.table">
+		<td class="hidden-xs"><div id="cbi-table-16-idx">
+
+
+
+
+	<p class="form-control-static hidden-xs">16</p>
+	<p class="visible-xs">16</p>
+
+
+</div>
+<div id="cbip-table-16-idx"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-16-hostname">
+
+
+
+
+	<p class="form-control-static hidden-xs">Aqara_Hub_E1-6DB2<br /><span class="text-primary">Mesh</span></p>
+	<p class="visible-xs">Aqara_Hub_E1-6DB2<br /><span class="text-primary">Mesh</span></p>
+
+
+</div>
+<div id="cbip-table-16-hostname"></div>
+</td>
+
+
+
+<td class="visible-xs"><div id="cbi-table-16-hostnamexs">
+
+
+
+
+	<p class="form-control-static hidden-xs">Aqara_Hub_E1-6DB2<br />192.168.178.131</p>
+	<p class="visible-xs">Aqara_Hub_E1-6DB2<br />192.168.178.131</p>
+
+
+</div>
+<div id="cbip-table-16-hostnamexs"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-16-icon">
+
+
+<div style="white-space:nowrap;"><span class="fa-2x"><i class="icon icon-none text-primary" aria-hidden="true"></i></span></div>
+</div>
+<div id="cbip-table-16-icon"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-16-ipmac">
+
+
+
+
+	<p class="form-control-static hidden-xs">192.168.178.131<br />54:EF:44:31:6D:B2</p>
+	<p class="visible-xs">192.168.178.131<br />54:EF:44:31:6D:B2</p>
+
+
+</div>
+<div id="cbip-table-16-ipmac"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-16-speed">
+
+
+
+
+	<p class="form-control-static hidden-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+	<p class="visible-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+
+
+</div>
+<div id="cbip-table-16-speed"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-16-signal">
+
+
+
+
+	<p class="form-control-static hidden-xs">-76 dBm</p>
+	<p class="visible-xs">-76 dBm</p>
+
+
+</div>
+<div id="cbip-table-16-signal"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-16-online">
+
+
+
+
+	<p class="form-control-static hidden-xs">09:31:09</p>
+	<p class="visible-xs">09:31:09</p>
+
+
+</div>
+<div id="cbip-table-16-online"></div>
+</td>
+
+
+
+<td><div id="cbi-table-16-internet">
+
+
+	<input type="hidden" value="1" name="cbi.cbe.table.16.internet" />
+	<input type="hidden" id="cbid.table.16.internet" name="cbid.table.16.internet" value="1" />
+
+	
+			<i class="fa fa-toggle-on  fa-2x text-primary" 
+			   onclick="if (this.classList.contains('fa-toggle-off')) { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=54:EF:44:31:6D:B2&hostname=Aqara_Hub_E1-6DB2&internet=1&vpn=0&dnsfilter=1'); 
+			   	
+			   } else { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=54:EF:44:31:6D:B2&hostname=Aqara_Hub_E1-6DB2&internet=1&vpn=0&dnsfilter=1');
+			   	
+			   }"></i>
+			
+	
+
+	<i class="fa fa-spinner fa-2x fa-pulse text-primary hidden"></i>
+</div>
+<div id="cbip-table-16-internet"></div>
+</td>
+
+
+
+<td><div id="cbi-table-16-devinfo">
+
+
+	
+		<button class="btn btn-link" type="submit" onclick='cbi_show_modal(this, "/cgi-bin/luci/admin/network/devices/devinfo", "macaddr=54:EF:44:31:6D:B2&hostname=Aqara_Hub_E1-6DB2&internet=1&vpn=0&dnsfilter=1");return false;' name="cbid.table.16.devinfo" value="" data-action="modal"><i class="fa fa-edit fa-lg"></i></button>
+		<button class="btn hidden btn-link" type="button" disabled=true><i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;</button>
+	
+</div>
+<div id="cbip-table-16-devinfo"></div>
+</td>
+
+
+
+</tr><tr id="cbi-table-17" ondragstart="drag_start(event);" ondragend="drag_end(event);" ondragenter="drag_enter(event);" ondragleave="drag_leave(event);" ondrop="drag_drop(event);" ondragover="drag_over(event);"  data-sid="17" data-store="cbi.sts.table.table">
+		<td class="hidden-xs"><div id="cbi-table-17-idx">
+
+
+
+
+	<p class="form-control-static hidden-xs">17</p>
+	<p class="visible-xs">17</p>
+
+
+</div>
+<div id="cbip-table-17-idx"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-17-hostname">
+
+
+
+
+	<p class="form-control-static hidden-xs">Unknown<br /><span class="text-primary">Mesh</span></p>
+	<p class="visible-xs">Unknown<br /><span class="text-primary">Mesh</span></p>
+
+
+</div>
+<div id="cbip-table-17-hostname"></div>
+</td>
+
+
+
+<td class="visible-xs"><div id="cbi-table-17-hostnamexs">
+
+
+
+
+	<p class="form-control-static hidden-xs">Unknown<br />192.168.178.137</p>
+	<p class="visible-xs">Unknown<br />192.168.178.137</p>
+
+
+</div>
+<div id="cbip-table-17-hostnamexs"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-17-icon">
+
+
+<div style="white-space:nowrap;"><span class="fa-2x"><i class="icon icon-none text-primary" aria-hidden="true"></i></span></div>
+</div>
+<div id="cbip-table-17-icon"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-17-ipmac">
+
+
+
+
+	<p class="form-control-static hidden-xs">192.168.178.137<br />5C:A6:E6:AA:7B:7A</p>
+	<p class="visible-xs">192.168.178.137<br />5C:A6:E6:AA:7B:7A</p>
+
+
+</div>
+<div id="cbip-table-17-ipmac"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-17-speed">
+
+
+
+
+	<p class="form-control-static hidden-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+	<p class="visible-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+
+
+</div>
+<div id="cbip-table-17-speed"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-17-signal">
+
+
+
+
+	<p class="form-control-static hidden-xs">-94 dBm</p>
+	<p class="visible-xs">-94 dBm</p>
+
+
+</div>
+<div id="cbip-table-17-signal"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-17-online">
+
+
+
+
+	<p class="form-control-static hidden-xs">09:31:08</p>
+	<p class="visible-xs">09:31:08</p>
+
+
+</div>
+<div id="cbip-table-17-online"></div>
+</td>
+
+
+
+<td><div id="cbi-table-17-internet">
+
+
+	<input type="hidden" value="1" name="cbi.cbe.table.17.internet" />
+	<input type="hidden" id="cbid.table.17.internet" name="cbid.table.17.internet" value="1" />
+
+	
+			<i class="fa fa-toggle-on  fa-2x text-primary" 
+			   onclick="if (this.classList.contains('fa-toggle-off')) { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=5C:A6:E6:AA:7B:7A&hostname=Unknown&internet=1&vpn=0&dnsfilter=1'); 
+			   	
+			   } else { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=5C:A6:E6:AA:7B:7A&hostname=Unknown&internet=1&vpn=0&dnsfilter=1');
+			   	
+			   }"></i>
+			
+	
+
+	<i class="fa fa-spinner fa-2x fa-pulse text-primary hidden"></i>
+</div>
+<div id="cbip-table-17-internet"></div>
+</td>
+
+
+
+<td><div id="cbi-table-17-devinfo">
+
+
+	
+		<button class="btn btn-link" type="submit" onclick='cbi_show_modal(this, "/cgi-bin/luci/admin/network/devices/devinfo", "macaddr=5C:A6:E6:AA:7B:7A&hostname=Unknown&internet=1&vpn=0&dnsfilter=1");return false;' name="cbid.table.17.devinfo" value="" data-action="modal"><i class="fa fa-edit fa-lg"></i></button>
+		<button class="btn hidden btn-link" type="button" disabled=true><i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;</button>
+	
+</div>
+<div id="cbip-table-17-devinfo"></div>
+</td>
+
+
+
+</tr><tr id="cbi-table-18" ondragstart="drag_start(event);" ondragend="drag_end(event);" ondragenter="drag_enter(event);" ondragleave="drag_leave(event);" ondrop="drag_drop(event);" ondragover="drag_over(event);"  data-sid="18" data-store="cbi.sts.table.table">
+		<td class="hidden-xs"><div id="cbi-table-18-idx">
+
+
+
+
+	<p class="form-control-static hidden-xs">18</p>
+	<p class="visible-xs">18</p>
+
+
+</div>
+<div id="cbip-table-18-idx"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-18-hostname">
+
+
+
+
+	<p class="form-control-static hidden-xs">DESKTOP-IJL1BS7<br /><span class="text-primary">Mesh</span></p>
+	<p class="visible-xs">DESKTOP-IJL1BS7<br /><span class="text-primary">Mesh</span></p>
+
+
+</div>
+<div id="cbip-table-18-hostname"></div>
+</td>
+
+
+
+<td class="visible-xs"><div id="cbi-table-18-hostnamexs">
+
+
+
+
+	<p class="form-control-static hidden-xs">DESKTOP-IJL1BS7<br />192.168.178.156</p>
+	<p class="visible-xs">DESKTOP-IJL1BS7<br />192.168.178.156</p>
+
+
+</div>
+<div id="cbip-table-18-hostnamexs"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-18-icon">
+
+
+<div style="white-space:nowrap;"><span class="fa-2x"><i class="icon icon-none text-primary" aria-hidden="true"></i></span></div>
+</div>
+<div id="cbip-table-18-icon"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-18-ipmac">
+
+
+
+
+	<p class="form-control-static hidden-xs">192.168.178.156<br />C0:BF:BE:02:C6:A4</p>
+	<p class="visible-xs">192.168.178.156<br />C0:BF:BE:02:C6:A4</p>
+
+
+</div>
+<div id="cbip-table-18-ipmac"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-18-speed">
+
+
+
+
+	<p class="form-control-static hidden-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+	<p class="visible-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+
+
+</div>
+<div id="cbip-table-18-speed"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-18-signal">
+
+
+
+
+	<p class="form-control-static hidden-xs">-63 dBm</p>
+	<p class="visible-xs">-63 dBm</p>
+
+
+</div>
+<div id="cbip-table-18-signal"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-18-online">
+
+
+
+
+	<p class="form-control-static hidden-xs">09:31:06</p>
+	<p class="visible-xs">09:31:06</p>
+
+
+</div>
+<div id="cbip-table-18-online"></div>
+</td>
+
+
+
+<td><div id="cbi-table-18-internet">
+
+
+	<input type="hidden" value="1" name="cbi.cbe.table.18.internet" />
+	<input type="hidden" id="cbid.table.18.internet" name="cbid.table.18.internet" value="1" />
+
+	
+			<i class="fa fa-toggle-on  fa-2x text-primary" 
+			   onclick="if (this.classList.contains('fa-toggle-off')) { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=C0:BF:BE:02:C6:A4&hostname=DESKTOP-IJL1BS7&internet=1&vpn=0&dnsfilter=1'); 
+			   	
+			   } else { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=C0:BF:BE:02:C6:A4&hostname=DESKTOP-IJL1BS7&internet=1&vpn=0&dnsfilter=1');
+			   	
+			   }"></i>
+			
+	
+
+	<i class="fa fa-spinner fa-2x fa-pulse text-primary hidden"></i>
+</div>
+<div id="cbip-table-18-internet"></div>
+</td>
+
+
+
+<td><div id="cbi-table-18-devinfo">
+
+
+	
+		<button class="btn btn-link" type="submit" onclick='cbi_show_modal(this, "/cgi-bin/luci/admin/network/devices/devinfo", "macaddr=C0:BF:BE:02:C6:A4&hostname=DESKTOP-IJL1BS7&internet=1&vpn=0&dnsfilter=1");return false;' name="cbid.table.18.devinfo" value="" data-action="modal"><i class="fa fa-edit fa-lg"></i></button>
+		<button class="btn hidden btn-link" type="button" disabled=true><i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;</button>
+	
+</div>
+<div id="cbip-table-18-devinfo"></div>
+</td>
+
+
+
+</tr><tr id="cbi-table-19" ondragstart="drag_start(event);" ondragend="drag_end(event);" ondragenter="drag_enter(event);" ondragleave="drag_leave(event);" ondrop="drag_drop(event);" ondragover="drag_over(event);"  data-sid="19" data-store="cbi.sts.table.table">
+		<td class="hidden-xs"><div id="cbi-table-19-idx">
+
+
+
+
+	<p class="form-control-static hidden-xs">19</p>
+	<p class="visible-xs">19</p>
+
+
+</div>
+<div id="cbip-table-19-idx"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-19-hostname">
+
+
+
+
+	<p class="form-control-static hidden-xs">Unknown<br /><span class="text-primary">Mesh</span></p>
+	<p class="visible-xs">Unknown<br /><span class="text-primary">Mesh</span></p>
+
+
+</div>
+<div id="cbip-table-19-hostname"></div>
+</td>
+
+
+
+<td class="visible-xs"><div id="cbi-table-19-hostnamexs">
+
+
+
+
+	<p class="form-control-static hidden-xs">Unknown<br />192.168.178.162</p>
+	<p class="visible-xs">Unknown<br />192.168.178.162</p>
+
+
+</div>
+<div id="cbip-table-19-hostnamexs"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-19-icon">
+
+
+<div style="white-space:nowrap;"><span class="fa-2x"><i class="icon icon-none text-primary" aria-hidden="true"></i></span></div>
+</div>
+<div id="cbip-table-19-icon"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-19-ipmac">
+
+
+
+
+	<p class="form-control-static hidden-xs">192.168.178.162<br />9C:B8:B4:58:BB:D0</p>
+	<p class="visible-xs">192.168.178.162<br />9C:B8:B4:58:BB:D0</p>
+
+
+</div>
+<div id="cbip-table-19-ipmac"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-19-speed">
+
+
+
+
+	<p class="form-control-static hidden-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+	<p class="visible-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+
+
+</div>
+<div id="cbip-table-19-speed"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-19-signal">
+
+
+
+
+	<p class="form-control-static hidden-xs">-64 dBm</p>
+	<p class="visible-xs">-64 dBm</p>
+
+
+</div>
+<div id="cbip-table-19-signal"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-19-online">
+
+
+
+
+	<p class="form-control-static hidden-xs">09:31:09</p>
+	<p class="visible-xs">09:31:09</p>
+
+
+</div>
+<div id="cbip-table-19-online"></div>
+</td>
+
+
+
+<td><div id="cbi-table-19-internet">
+
+
+	<input type="hidden" value="1" name="cbi.cbe.table.19.internet" />
+	<input type="hidden" id="cbid.table.19.internet" name="cbid.table.19.internet" value="1" />
+
+	
+			<i class="fa fa-toggle-on  fa-2x text-primary" 
+			   onclick="if (this.classList.contains('fa-toggle-off')) { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=9C:B8:B4:58:BB:D0&hostname=Unknown&internet=1&vpn=0&dnsfilter=1'); 
+			   	
+			   } else { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=9C:B8:B4:58:BB:D0&hostname=Unknown&internet=1&vpn=0&dnsfilter=1');
+			   	
+			   }"></i>
+			
+	
+
+	<i class="fa fa-spinner fa-2x fa-pulse text-primary hidden"></i>
+</div>
+<div id="cbip-table-19-internet"></div>
+</td>
+
+
+
+<td><div id="cbi-table-19-devinfo">
+
+
+	
+		<button class="btn btn-link" type="submit" onclick='cbi_show_modal(this, "/cgi-bin/luci/admin/network/devices/devinfo", "macaddr=9C:B8:B4:58:BB:D0&hostname=Unknown&internet=1&vpn=0&dnsfilter=1");return false;' name="cbid.table.19.devinfo" value="" data-action="modal"><i class="fa fa-edit fa-lg"></i></button>
+		<button class="btn hidden btn-link" type="button" disabled=true><i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;</button>
+	
+</div>
+<div id="cbip-table-19-devinfo"></div>
+</td>
+
+
+
+</tr><tr id="cbi-table-20" ondragstart="drag_start(event);" ondragend="drag_end(event);" ondragenter="drag_enter(event);" ondragleave="drag_leave(event);" ondrop="drag_drop(event);" ondragover="drag_over(event);"  data-sid="20" data-store="cbi.sts.table.table">
+		<td class="hidden-xs"><div id="cbi-table-20-idx">
+
+
+
+
+	<p class="form-control-static hidden-xs">20</p>
+	<p class="visible-xs">20</p>
+
+
+</div>
+<div id="cbip-table-20-idx"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-20-hostname">
+
+
+
+
+	<p class="form-control-static hidden-xs">SmartLife-94C4<br /><span class="text-primary">Mesh</span></p>
+	<p class="visible-xs">SmartLife-94C4<br /><span class="text-primary">Mesh</span></p>
+
+
+</div>
+<div id="cbip-table-20-hostname"></div>
+</td>
+
+
+
+<td class="visible-xs"><div id="cbi-table-20-hostnamexs">
+
+
+
+
+	<p class="form-control-static hidden-xs">SmartLife-94C4<br />192.168.178.166</p>
+	<p class="visible-xs">SmartLife-94C4<br />192.168.178.166</p>
+
+
+</div>
+<div id="cbip-table-20-hostnamexs"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-20-icon">
+
+
+<div style="white-space:nowrap;"><span class="fa-2x"><i class="icon icon-none text-primary" aria-hidden="true"></i></span></div>
+</div>
+<div id="cbip-table-20-icon"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-20-ipmac">
+
+
+
+
+	<p class="form-control-static hidden-xs">192.168.178.166<br />38:2C:E5:3F:94:C4</p>
+	<p class="visible-xs">192.168.178.166<br />38:2C:E5:3F:94:C4</p>
+
+
+</div>
+<div id="cbip-table-20-ipmac"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-20-speed">
+
+
+
+
+	<p class="form-control-static hidden-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+	<p class="visible-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+
+
+</div>
+<div id="cbip-table-20-speed"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-20-signal">
+
+
+
+
+	<p class="form-control-static hidden-xs">-54 dBm</p>
+	<p class="visible-xs">-54 dBm</p>
+
+
+</div>
+<div id="cbip-table-20-signal"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-20-online">
+
+
+
+
+	<p class="form-control-static hidden-xs">09:31:09</p>
+	<p class="visible-xs">09:31:09</p>
+
+
+</div>
+<div id="cbip-table-20-online"></div>
+</td>
+
+
+
+<td><div id="cbi-table-20-internet">
+
+
+	<input type="hidden" value="1" name="cbi.cbe.table.20.internet" />
+	<input type="hidden" id="cbid.table.20.internet" name="cbid.table.20.internet" value="1" />
+
+	
+			<i class="fa fa-toggle-on  fa-2x text-primary" 
+			   onclick="if (this.classList.contains('fa-toggle-off')) { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=38:2C:E5:3F:94:C4&hostname=SmartLife-94C4&internet=1&vpn=0&dnsfilter=1'); 
+			   	
+			   } else { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=38:2C:E5:3F:94:C4&hostname=SmartLife-94C4&internet=1&vpn=0&dnsfilter=1');
+			   	
+			   }"></i>
+			
+	
+
+	<i class="fa fa-spinner fa-2x fa-pulse text-primary hidden"></i>
+</div>
+<div id="cbip-table-20-internet"></div>
+</td>
+
+
+
+<td><div id="cbi-table-20-devinfo">
+
+
+	
+		<button class="btn btn-link" type="submit" onclick='cbi_show_modal(this, "/cgi-bin/luci/admin/network/devices/devinfo", "macaddr=38:2C:E5:3F:94:C4&hostname=SmartLife-94C4&internet=1&vpn=0&dnsfilter=1");return false;' name="cbid.table.20.devinfo" value="" data-action="modal"><i class="fa fa-edit fa-lg"></i></button>
+		<button class="btn hidden btn-link" type="button" disabled=true><i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;</button>
+	
+</div>
+<div id="cbip-table-20-devinfo"></div>
+</td>
+
+
+
+</tr><tr id="cbi-table-21" ondragstart="drag_start(event);" ondragend="drag_end(event);" ondragenter="drag_enter(event);" ondragleave="drag_leave(event);" ondrop="drag_drop(event);" ondragover="drag_over(event);"  data-sid="21" data-store="cbi.sts.table.table">
+		<td class="hidden-xs"><div id="cbi-table-21-idx">
+
+
+
+
+	<p class="form-control-static hidden-xs">21</p>
+	<p class="visible-xs">21</p>
+
+
+</div>
+<div id="cbip-table-21-idx"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-21-hostname">
+
+
+
+
+	<p class="form-control-static hidden-xs">Mesh_69F0<br /><span class="text-primary">Wired</span></p>
+	<p class="visible-xs">Mesh_69F0<br /><span class="text-primary">Wired</span></p>
+
+
+</div>
+<div id="cbip-table-21-hostname"></div>
+</td>
+
+
+
+<td class="visible-xs"><div id="cbi-table-21-hostnamexs">
+
+
+
+
+	<p class="form-control-static hidden-xs">Mesh_69F0<br />192.168.178.167</p>
+	<p class="visible-xs">Mesh_69F0<br />192.168.178.167</p>
+
+
+</div>
+<div id="cbip-table-21-hostnamexs"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-21-icon">
+
+
+<div style="white-space:nowrap;"><span class="fa-2x"><i class="icon icon-none text-primary" aria-hidden="true"></i></span></div>
+</div>
+<div id="cbip-table-21-icon"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-21-ipmac">
+
+
+
+
+	<p class="form-control-static hidden-xs">192.168.178.167<br />80:AF:CA:B8:69:F0</p>
+	<p class="visible-xs">192.168.178.167<br />80:AF:CA:B8:69:F0</p>
+
+
+</div>
+<div id="cbip-table-21-ipmac"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-21-speed">
+
+
+
+
+	<p class="form-control-static hidden-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+	<p class="visible-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+
+
+</div>
+<div id="cbip-table-21-speed"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-21-signal">
+
+
+
+
+	<p class="form-control-static hidden-xs">---</p>
+	<p class="visible-xs">---</p>
+
+
+</div>
+<div id="cbip-table-21-signal"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-21-online">
+
+
+
+
+	<p class="form-control-static hidden-xs">09:31:10</p>
+	<p class="visible-xs">09:31:10</p>
+
+
+</div>
+<div id="cbip-table-21-online"></div>
+</td>
+
+
+
+<td><div id="cbi-table-21-internet">
+
+
+	<input type="hidden" value="1" name="cbi.cbe.table.21.internet" />
+	<input type="hidden" id="cbid.table.21.internet" name="cbid.table.21.internet" value="1" />
+
+	
+			<i class="fa fa-toggle-on  fa-2x text-primary" 
+			   onclick="if (this.classList.contains('fa-toggle-off')) { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=80:AF:CA:B8:69:F0&hostname=Mesh_69F0&internet=1&vpn=0&dnsfilter=1'); 
+			   	
+			   } else { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=80:AF:CA:B8:69:F0&hostname=Mesh_69F0&internet=1&vpn=0&dnsfilter=1');
+			   	
+			   }"></i>
+			
+	
+
+	<i class="fa fa-spinner fa-2x fa-pulse text-primary hidden"></i>
+</div>
+<div id="cbip-table-21-internet"></div>
+</td>
+
+
+
+<td><div id="cbi-table-21-devinfo">
+
+
+	
+		<button class="btn btn-link" type="submit" onclick='cbi_show_modal(this, "/cgi-bin/luci/admin/network/devices/devinfo", "macaddr=80:AF:CA:B8:69:F0&hostname=Mesh_69F0&internet=1&vpn=0&dnsfilter=1");return false;' name="cbid.table.21.devinfo" value="" data-action="modal"><i class="fa fa-edit fa-lg"></i></button>
+		<button class="btn hidden btn-link" type="button" disabled=true><i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;</button>
+	
+</div>
+<div id="cbip-table-21-devinfo"></div>
+</td>
+
+
+
+</tr><tr id="cbi-table-22" ondragstart="drag_start(event);" ondragend="drag_end(event);" ondragenter="drag_enter(event);" ondragleave="drag_leave(event);" ondrop="drag_drop(event);" ondragover="drag_over(event);"  data-sid="22" data-store="cbi.sts.table.table">
+		<td class="hidden-xs"><div id="cbi-table-22-idx">
+
+
+
+
+	<p class="form-control-static hidden-xs">22</p>
+	<p class="visible-xs">22</p>
+
+
+</div>
+<div id="cbip-table-22-idx"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-22-hostname">
+
+
+
+
+	<p class="form-control-static hidden-xs">zegarek<br /><span class="text-primary">2.4G WiFi</span></p>
+	<p class="visible-xs">zegarek<br /><span class="text-primary">2.4G WiFi</span></p>
+
+
+</div>
+<div id="cbip-table-22-hostname"></div>
+</td>
+
+
+
+<td class="visible-xs"><div id="cbi-table-22-hostnamexs">
+
+
+
+
+	<p class="form-control-static hidden-xs">zegarek<br />192.168.178.170</p>
+	<p class="visible-xs">zegarek<br />192.168.178.170</p>
+
+
+</div>
+<div id="cbip-table-22-hostnamexs"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-22-icon">
+
+
+<div style="white-space:nowrap;"><span class="fa-2x"><i class="icon icon-none text-primary" aria-hidden="true"></i></span></div>
+</div>
+<div id="cbip-table-22-icon"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-22-ipmac">
+
+
+
+
+	<p class="form-control-static hidden-xs">192.168.178.170<br />84:1F:E8:4D:68:A8</p>
+	<p class="visible-xs">192.168.178.170<br />84:1F:E8:4D:68:A8</p>
+
+
+</div>
+<div id="cbip-table-22-ipmac"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-22-speed">
+
+
+
+
+	<p class="form-control-static hidden-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+	<p class="visible-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+
+
+</div>
+<div id="cbip-table-22-speed"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-22-signal">
+
+
+
+
+	<p class="form-control-static hidden-xs">-60 dBm</p>
+	<p class="visible-xs">-60 dBm</p>
+
+
+</div>
+<div id="cbip-table-22-signal"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-22-online">
+
+
+
+
+	<p class="form-control-static hidden-xs">09:31:05</p>
+	<p class="visible-xs">09:31:05</p>
+
+
+</div>
+<div id="cbip-table-22-online"></div>
+</td>
+
+
+
+<td><div id="cbi-table-22-internet">
+
+
+	<input type="hidden" value="1" name="cbi.cbe.table.22.internet" />
+	<input type="hidden" id="cbid.table.22.internet" name="cbid.table.22.internet" value="1" />
+
+	
+			<i class="fa fa-toggle-on  fa-2x text-primary" 
+			   onclick="if (this.classList.contains('fa-toggle-off')) { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=84:1F:E8:4D:68:A8&hostname=zegarek&internet=1&vpn=0&dnsfilter=1'); 
+			   	
+			   } else { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=84:1F:E8:4D:68:A8&hostname=zegarek&internet=1&vpn=0&dnsfilter=1');
+			   	
+			   }"></i>
+			
+	
+
+	<i class="fa fa-spinner fa-2x fa-pulse text-primary hidden"></i>
+</div>
+<div id="cbip-table-22-internet"></div>
+</td>
+
+
+
+<td><div id="cbi-table-22-devinfo">
+
+
+	
+		<button class="btn btn-link" type="submit" onclick='cbi_show_modal(this, "/cgi-bin/luci/admin/network/devices/devinfo", "macaddr=84:1F:E8:4D:68:A8&hostname=zegarek&internet=1&vpn=0&dnsfilter=1");return false;' name="cbid.table.22.devinfo" value="" data-action="modal"><i class="fa fa-edit fa-lg"></i></button>
+		<button class="btn hidden btn-link" type="button" disabled=true><i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;</button>
+	
+</div>
+<div id="cbip-table-22-devinfo"></div>
+</td>
+
+
+
+</tr><tr id="cbi-table-23" ondragstart="drag_start(event);" ondragend="drag_end(event);" ondragenter="drag_enter(event);" ondragleave="drag_leave(event);" ondrop="drag_drop(event);" ondragover="drag_over(event);"  data-sid="23" data-store="cbi.sts.table.table">
+		<td class="hidden-xs"><div id="cbi-table-23-idx">
+
+
+
+
+	<p class="form-control-static hidden-xs">23</p>
+	<p class="visible-xs">23</p>
+
+
+</div>
+<div id="cbip-table-23-idx"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-23-hostname">
+
+
+
+
+	<p class="form-control-static hidden-xs">homeassistant<br /><span class="text-primary">Wired</span></p>
+	<p class="visible-xs">homeassistant<br /><span class="text-primary">Wired</span></p>
+
+
+</div>
+<div id="cbip-table-23-hostname"></div>
+</td>
+
+
+
+<td class="visible-xs"><div id="cbi-table-23-hostnamexs">
+
+
+
+
+	<p class="form-control-static hidden-xs">homeassistant<br />192.168.178.183</p>
+	<p class="visible-xs">homeassistant<br />192.168.178.183</p>
+
+
+</div>
+<div id="cbip-table-23-hostnamexs"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-23-icon">
+
+
+<div style="white-space:nowrap;"><span class="fa-2x"><i class="icon icon-none text-primary" aria-hidden="true"></i></span></div>
+</div>
+<div id="cbip-table-23-icon"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-23-ipmac">
+
+
+
+
+	<p class="form-control-static hidden-xs">192.168.178.183<br />88:A2:9E:00:67:42</p>
+	<p class="visible-xs">192.168.178.183<br />88:A2:9E:00:67:42</p>
+
+
+</div>
+<div id="cbip-table-23-ipmac"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-23-speed">
+
+
+
+
+	<p class="form-control-static hidden-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 1.61 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 2.18 Kbps</p>
+	<p class="visible-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 1.61 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 2.18 Kbps</p>
+
+
+</div>
+<div id="cbip-table-23-speed"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-23-signal">
+
+
+
+
+	<p class="form-control-static hidden-xs">---</p>
+	<p class="visible-xs">---</p>
+
+
+</div>
+<div id="cbip-table-23-signal"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-23-online">
+
+
+
+
+	<p class="form-control-static hidden-xs">09:30:41</p>
+	<p class="visible-xs">09:30:41</p>
+
+
+</div>
+<div id="cbip-table-23-online"></div>
+</td>
+
+
+
+<td><div id="cbi-table-23-internet">
+
+
+	<input type="hidden" value="1" name="cbi.cbe.table.23.internet" />
+	<input type="hidden" id="cbid.table.23.internet" name="cbid.table.23.internet" value="1" />
+
+	
+			<i class="fa fa-toggle-on  fa-2x text-primary" 
+			   onclick="if (this.classList.contains('fa-toggle-off')) { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=88:A2:9E:00:67:42&hostname=homeassistant&internet=1&vpn=0&dnsfilter=1'); 
+			   	
+			   } else { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=88:A2:9E:00:67:42&hostname=homeassistant&internet=1&vpn=0&dnsfilter=1');
+			   	
+			   }"></i>
+			
+	
+
+	<i class="fa fa-spinner fa-2x fa-pulse text-primary hidden"></i>
+</div>
+<div id="cbip-table-23-internet"></div>
+</td>
+
+
+
+<td><div id="cbi-table-23-devinfo">
+
+
+	
+		<button class="btn btn-link" type="submit" onclick='cbi_show_modal(this, "/cgi-bin/luci/admin/network/devices/devinfo", "macaddr=88:A2:9E:00:67:42&hostname=homeassistant&internet=1&vpn=0&dnsfilter=1");return false;' name="cbid.table.23.devinfo" value="" data-action="modal"><i class="fa fa-edit fa-lg"></i></button>
+		<button class="btn hidden btn-link" type="button" disabled=true><i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;</button>
+	
+</div>
+<div id="cbip-table-23-devinfo"></div>
+</td>
+
+
+
+</tr><tr id="cbi-table-24" ondragstart="drag_start(event);" ondragend="drag_end(event);" ondragenter="drag_enter(event);" ondragleave="drag_leave(event);" ondrop="drag_drop(event);" ondragover="drag_over(event);"  data-sid="24" data-store="cbi.sts.table.table">
+		<td class="hidden-xs"><div id="cbi-table-24-idx">
+
+
+
+
+	<p class="form-control-static hidden-xs">24</p>
+	<p class="visible-xs">24</p>
+
+
+</div>
+<div id="cbip-table-24-idx"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-24-hostname">
+
+
+
+
+	<p class="form-control-static hidden-xs">server<br /><span class="text-primary">Wired</span></p>
+	<p class="visible-xs">server<br /><span class="text-primary">Wired</span></p>
+
+
+</div>
+<div id="cbip-table-24-hostname"></div>
+</td>
+
+
+
+<td class="visible-xs"><div id="cbi-table-24-hostnamexs">
+
+
+
+
+	<p class="form-control-static hidden-xs">server<br />192.168.178.191</p>
+	<p class="visible-xs">server<br />192.168.178.191</p>
+
+
+</div>
+<div id="cbip-table-24-hostnamexs"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-24-icon">
+
+
+<div style="white-space:nowrap;"><span class="fa-2x"><i class="icon icon-none text-primary" aria-hidden="true"></i></span></div>
+</div>
+<div id="cbip-table-24-icon"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-24-ipmac">
+
+
+
+
+	<p class="form-control-static hidden-xs">192.168.178.191<br />00:E0:4C:73:3A:01</p>
+	<p class="visible-xs">192.168.178.191<br />00:E0:4C:73:3A:01</p>
+
+
+</div>
+<div id="cbip-table-24-ipmac"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-24-speed">
+
+
+
+
+	<p class="form-control-static hidden-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 12.26 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 10.62 Kbps</p>
+	<p class="visible-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 12.26 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 10.62 Kbps</p>
+
+
+</div>
+<div id="cbip-table-24-speed"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-24-signal">
+
+
+
+
+	<p class="form-control-static hidden-xs">---</p>
+	<p class="visible-xs">---</p>
+
+
+</div>
+<div id="cbip-table-24-signal"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-24-online">
+
+
+
+
+	<p class="form-control-static hidden-xs">09:30:58</p>
+	<p class="visible-xs">09:30:58</p>
+
+
+</div>
+<div id="cbip-table-24-online"></div>
+</td>
+
+
+
+<td><div id="cbi-table-24-internet">
+
+
+	<input type="hidden" value="1" name="cbi.cbe.table.24.internet" />
+	<input type="hidden" id="cbid.table.24.internet" name="cbid.table.24.internet" value="1" />
+
+	
+			<i class="fa fa-toggle-on  fa-2x text-primary" 
+			   onclick="if (this.classList.contains('fa-toggle-off')) { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=00:E0:4C:73:3A:01&hostname=server&internet=1&vpn=0&dnsfilter=1'); 
+			   	
+			   } else { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=00:E0:4C:73:3A:01&hostname=server&internet=1&vpn=0&dnsfilter=1');
+			   	
+			   }"></i>
+			
+	
+
+	<i class="fa fa-spinner fa-2x fa-pulse text-primary hidden"></i>
+</div>
+<div id="cbip-table-24-internet"></div>
+</td>
+
+
+
+<td><div id="cbi-table-24-devinfo">
+
+
+	
+		<button class="btn btn-link" type="submit" onclick='cbi_show_modal(this, "/cgi-bin/luci/admin/network/devices/devinfo", "macaddr=00:E0:4C:73:3A:01&hostname=server&internet=1&vpn=0&dnsfilter=1");return false;' name="cbid.table.24.devinfo" value="" data-action="modal"><i class="fa fa-edit fa-lg"></i></button>
+		<button class="btn hidden btn-link" type="button" disabled=true><i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;</button>
+	
+</div>
+<div id="cbip-table-24-devinfo"></div>
+</td>
+
+
+
+</tr><tr id="cbi-table-25" ondragstart="drag_start(event);" ondragend="drag_end(event);" ondragenter="drag_enter(event);" ondragleave="drag_leave(event);" ondrop="drag_drop(event);" ondragover="drag_over(event);"  data-sid="25" data-store="cbi.sts.table.table">
+		<td class="hidden-xs"><div id="cbi-table-25-idx">
+
+
+
+
+	<p class="form-control-static hidden-xs">25</p>
+	<p class="visible-xs">25</p>
+
+
+</div>
+<div id="cbip-table-25-idx"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-25-hostname">
+
+
+
+
+	<p class="form-control-static hidden-xs">Unknown<br /><span class="text-primary">2.4G WiFi</span></p>
+	<p class="visible-xs">Unknown<br /><span class="text-primary">2.4G WiFi</span></p>
+
+
+</div>
+<div id="cbip-table-25-hostname"></div>
+</td>
+
+
+
+<td class="visible-xs"><div id="cbi-table-25-hostnamexs">
+
+
+
+
+	<p class="form-control-static hidden-xs">Unknown<br />192.168.178.200</p>
+	<p class="visible-xs">Unknown<br />192.168.178.200</p>
+
+
+</div>
+<div id="cbip-table-25-hostnamexs"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-25-icon">
+
+
+<div style="white-space:nowrap;"><span class="fa-2x"><i class="icon icon-none text-primary" aria-hidden="true"></i></span></div>
+</div>
+<div id="cbip-table-25-icon"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-25-ipmac">
+
+
+
+
+	<p class="form-control-static hidden-xs">192.168.178.200<br />10:D5:61:38:63:5A</p>
+	<p class="visible-xs">192.168.178.200<br />10:D5:61:38:63:5A</p>
+
+
+</div>
+<div id="cbip-table-25-ipmac"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-25-speed">
+
+
+
+
+	<p class="form-control-static hidden-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+	<p class="visible-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+
+
+</div>
+<div id="cbip-table-25-speed"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-25-signal">
+
+
+
+
+	<p class="form-control-static hidden-xs">-57 dBm</p>
+	<p class="visible-xs">-57 dBm</p>
+
+
+</div>
+<div id="cbip-table-25-signal"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-25-online">
+
+
+
+
+	<p class="form-control-static hidden-xs">09:30:24</p>
+	<p class="visible-xs">09:30:24</p>
+
+
+</div>
+<div id="cbip-table-25-online"></div>
+</td>
+
+
+
+<td><div id="cbi-table-25-internet">
+
+
+	<input type="hidden" value="1" name="cbi.cbe.table.25.internet" />
+	<input type="hidden" id="cbid.table.25.internet" name="cbid.table.25.internet" value="1" />
+
+	
+			<i class="fa fa-toggle-on  fa-2x text-primary" 
+			   onclick="if (this.classList.contains('fa-toggle-off')) { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=10:D5:61:38:63:5A&hostname=Unknown&internet=1&vpn=0&dnsfilter=1'); 
+			   	
+			   } else { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=10:D5:61:38:63:5A&hostname=Unknown&internet=1&vpn=0&dnsfilter=1');
+			   	
+			   }"></i>
+			
+	
+
+	<i class="fa fa-spinner fa-2x fa-pulse text-primary hidden"></i>
+</div>
+<div id="cbip-table-25-internet"></div>
+</td>
+
+
+
+<td><div id="cbi-table-25-devinfo">
+
+
+	
+		<button class="btn btn-link" type="submit" onclick='cbi_show_modal(this, "/cgi-bin/luci/admin/network/devices/devinfo", "macaddr=10:D5:61:38:63:5A&hostname=Unknown&internet=1&vpn=0&dnsfilter=1");return false;' name="cbid.table.25.devinfo" value="" data-action="modal"><i class="fa fa-edit fa-lg"></i></button>
+		<button class="btn hidden btn-link" type="button" disabled=true><i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;</button>
+	
+</div>
+<div id="cbip-table-25-devinfo"></div>
+</td>
+
+
+
+</tr><tr id="cbi-table-26" ondragstart="drag_start(event);" ondragend="drag_end(event);" ondragenter="drag_enter(event);" ondragleave="drag_leave(event);" ondrop="drag_drop(event);" ondragover="drag_over(event);"  data-sid="26" data-store="cbi.sts.table.table">
+		<td class="hidden-xs"><div id="cbi-table-26-idx">
+
+
+
+
+	<p class="form-control-static hidden-xs">26</p>
+	<p class="visible-xs">26</p>
+
+
+</div>
+<div id="cbip-table-26-idx"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-26-hostname">
+
+
+
+
+	<p class="form-control-static hidden-xs">esphome-web-df07bc<br /><span class="text-primary">Mesh</span></p>
+	<p class="visible-xs">esphome-web-df07bc<br /><span class="text-primary">Mesh</span></p>
+
+
+</div>
+<div id="cbip-table-26-hostname"></div>
+</td>
+
+
+
+<td class="visible-xs"><div id="cbi-table-26-hostnamexs">
+
+
+
+
+	<p class="form-control-static hidden-xs">esphome-web-df07bc<br />192.168.178.208</p>
+	<p class="visible-xs">esphome-web-df07bc<br />192.168.178.208</p>
+
+
+</div>
+<div id="cbip-table-26-hostnamexs"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-26-icon">
+
+
+<div style="white-space:nowrap;"><span class="fa-2x"><i class="icon icon-none text-primary" aria-hidden="true"></i></span></div>
+</div>
+<div id="cbip-table-26-icon"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-26-ipmac">
+
+
+
+
+	<p class="form-control-static hidden-xs">192.168.178.208<br />3C:0F:02:DF:07:BC</p>
+	<p class="visible-xs">192.168.178.208<br />3C:0F:02:DF:07:BC</p>
+
+
+</div>
+<div id="cbip-table-26-ipmac"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-26-speed">
+
+
+
+
+	<p class="form-control-static hidden-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+	<p class="visible-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+
+
+</div>
+<div id="cbip-table-26-speed"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-26-signal">
+
+
+
+
+	<p class="form-control-static hidden-xs">-61 dBm</p>
+	<p class="visible-xs">-61 dBm</p>
+
+
+</div>
+<div id="cbip-table-26-signal"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-26-online">
+
+
+
+
+	<p class="form-control-static hidden-xs">09:30:45</p>
+	<p class="visible-xs">09:30:45</p>
+
+
+</div>
+<div id="cbip-table-26-online"></div>
+</td>
+
+
+
+<td><div id="cbi-table-26-internet">
+
+
+	<input type="hidden" value="1" name="cbi.cbe.table.26.internet" />
+	<input type="hidden" id="cbid.table.26.internet" name="cbid.table.26.internet" value="1" />
+
+	
+			<i class="fa fa-toggle-on  fa-2x text-primary" 
+			   onclick="if (this.classList.contains('fa-toggle-off')) { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=3C:0F:02:DF:07:BC&hostname=esphome-web-df07bc&internet=1&vpn=0&dnsfilter=1'); 
+			   	
+			   } else { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=3C:0F:02:DF:07:BC&hostname=esphome-web-df07bc&internet=1&vpn=0&dnsfilter=1');
+			   	
+			   }"></i>
+			
+	
+
+	<i class="fa fa-spinner fa-2x fa-pulse text-primary hidden"></i>
+</div>
+<div id="cbip-table-26-internet"></div>
+</td>
+
+
+
+<td><div id="cbi-table-26-devinfo">
+
+
+	
+		<button class="btn btn-link" type="submit" onclick='cbi_show_modal(this, "/cgi-bin/luci/admin/network/devices/devinfo", "macaddr=3C:0F:02:DF:07:BC&hostname=esphome-web-df07bc&internet=1&vpn=0&dnsfilter=1");return false;' name="cbid.table.26.devinfo" value="" data-action="modal"><i class="fa fa-edit fa-lg"></i></button>
+		<button class="btn hidden btn-link" type="button" disabled=true><i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;</button>
+	
+</div>
+<div id="cbip-table-26-devinfo"></div>
+</td>
+
+
+
+</tr><tr id="cbi-table-27" ondragstart="drag_start(event);" ondragend="drag_end(event);" ondragenter="drag_enter(event);" ondragleave="drag_leave(event);" ondrop="drag_drop(event);" ondragover="drag_over(event);"  data-sid="27" data-store="cbi.sts.table.table">
+		<td class="hidden-xs"><div id="cbi-table-27-idx">
+
+
+
+
+	<p class="form-control-static hidden-xs">27</p>
+	<p class="visible-xs">27</p>
+
+
+</div>
+<div id="cbip-table-27-idx"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-27-hostname">
+
+
+
+
+	<p class="form-control-static hidden-xs">SmartLife-8F06<br /><span class="text-primary">Mesh</span></p>
+	<p class="visible-xs">SmartLife-8F06<br /><span class="text-primary">Mesh</span></p>
+
+
+</div>
+<div id="cbip-table-27-hostname"></div>
+</td>
+
+
+
+<td class="visible-xs"><div id="cbi-table-27-hostnamexs">
+
+
+
+
+	<p class="form-control-static hidden-xs">SmartLife-8F06<br />192.168.178.223</p>
+	<p class="visible-xs">SmartLife-8F06<br />192.168.178.223</p>
+
+
+</div>
+<div id="cbip-table-27-hostnamexs"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-27-icon">
+
+
+<div style="white-space:nowrap;"><span class="fa-2x"><i class="icon icon-none text-primary" aria-hidden="true"></i></span></div>
+</div>
+<div id="cbip-table-27-icon"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-27-ipmac">
+
+
+
+
+	<p class="form-control-static hidden-xs">192.168.178.223<br />38:2C:E5:3F:8F:06</p>
+	<p class="visible-xs">192.168.178.223<br />38:2C:E5:3F:8F:06</p>
+
+
+</div>
+<div id="cbip-table-27-ipmac"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-27-speed">
+
+
+
+
+	<p class="form-control-static hidden-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+	<p class="visible-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+
+
+</div>
+<div id="cbip-table-27-speed"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-27-signal">
+
+
+
+
+	<p class="form-control-static hidden-xs">-80 dBm</p>
+	<p class="visible-xs">-80 dBm</p>
+
+
+</div>
+<div id="cbip-table-27-signal"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-27-online">
+
+
+
+
+	<p class="form-control-static hidden-xs">09:31:10</p>
+	<p class="visible-xs">09:31:10</p>
+
+
+</div>
+<div id="cbip-table-27-online"></div>
+</td>
+
+
+
+<td><div id="cbi-table-27-internet">
+
+
+	<input type="hidden" value="1" name="cbi.cbe.table.27.internet" />
+	<input type="hidden" id="cbid.table.27.internet" name="cbid.table.27.internet" value="1" />
+
+	
+			<i class="fa fa-toggle-on  fa-2x text-primary" 
+			   onclick="if (this.classList.contains('fa-toggle-off')) { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=38:2C:E5:3F:8F:06&hostname=SmartLife-8F06&internet=1&vpn=0&dnsfilter=1'); 
+			   	
+			   } else { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=38:2C:E5:3F:8F:06&hostname=SmartLife-8F06&internet=1&vpn=0&dnsfilter=1');
+			   	
+			   }"></i>
+			
+	
+
+	<i class="fa fa-spinner fa-2x fa-pulse text-primary hidden"></i>
+</div>
+<div id="cbip-table-27-internet"></div>
+</td>
+
+
+
+<td><div id="cbi-table-27-devinfo">
+
+
+	
+		<button class="btn btn-link" type="submit" onclick='cbi_show_modal(this, "/cgi-bin/luci/admin/network/devices/devinfo", "macaddr=38:2C:E5:3F:8F:06&hostname=SmartLife-8F06&internet=1&vpn=0&dnsfilter=1");return false;' name="cbid.table.27.devinfo" value="" data-action="modal"><i class="fa fa-edit fa-lg"></i></button>
+		<button class="btn hidden btn-link" type="button" disabled=true><i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;</button>
+	
+</div>
+<div id="cbip-table-27-devinfo"></div>
+</td>
+
+
+
+</tr><tr id="cbi-table-28" ondragstart="drag_start(event);" ondragend="drag_end(event);" ondragenter="drag_enter(event);" ondragleave="drag_leave(event);" ondrop="drag_drop(event);" ondragover="drag_over(event);"  data-sid="28" data-store="cbi.sts.table.table">
+		<td class="hidden-xs"><div id="cbi-table-28-idx">
+
+
+
+
+	<p class="form-control-static hidden-xs">28</p>
+	<p class="visible-xs">28</p>
+
+
+</div>
+<div id="cbip-table-28-idx"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-28-hostname">
+
+
+
+
+	<p class="form-control-static hidden-xs">SmartLife-312B<br /><span class="text-primary">Mesh</span></p>
+	<p class="visible-xs">SmartLife-312B<br /><span class="text-primary">Mesh</span></p>
+
+
+</div>
+<div id="cbip-table-28-hostname"></div>
+</td>
+
+
+
+<td class="visible-xs"><div id="cbi-table-28-hostnamexs">
+
+
+
+
+	<p class="form-control-static hidden-xs">SmartLife-312B<br />192.168.178.232</p>
+	<p class="visible-xs">SmartLife-312B<br />192.168.178.232</p>
+
+
+</div>
+<div id="cbip-table-28-hostnamexs"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-28-icon">
+
+
+<div style="white-space:nowrap;"><span class="fa-2x"><i class="icon icon-none text-primary" aria-hidden="true"></i></span></div>
+</div>
+<div id="cbip-table-28-icon"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-28-ipmac">
+
+
+
+
+	<p class="form-control-static hidden-xs">192.168.178.232<br />C0:F8:53:E5:31:2B</p>
+	<p class="visible-xs">192.168.178.232<br />C0:F8:53:E5:31:2B</p>
+
+
+</div>
+<div id="cbip-table-28-ipmac"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-28-speed">
+
+
+
+
+	<p class="form-control-static hidden-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+	<p class="visible-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+
+
+</div>
+<div id="cbip-table-28-speed"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-28-signal">
+
+
+
+
+	<p class="form-control-static hidden-xs">-54 dBm</p>
+	<p class="visible-xs">-54 dBm</p>
+
+
+</div>
+<div id="cbip-table-28-signal"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-28-online">
+
+
+
+
+	<p class="form-control-static hidden-xs">09:31:09</p>
+	<p class="visible-xs">09:31:09</p>
+
+
+</div>
+<div id="cbip-table-28-online"></div>
+</td>
+
+
+
+<td><div id="cbi-table-28-internet">
+
+
+	<input type="hidden" value="1" name="cbi.cbe.table.28.internet" />
+	<input type="hidden" id="cbid.table.28.internet" name="cbid.table.28.internet" value="1" />
+
+	
+			<i class="fa fa-toggle-on  fa-2x text-primary" 
+			   onclick="if (this.classList.contains('fa-toggle-off')) { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=C0:F8:53:E5:31:2B&hostname=SmartLife-312B&internet=1&vpn=0&dnsfilter=1'); 
+			   	
+			   } else { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=C0:F8:53:E5:31:2B&hostname=SmartLife-312B&internet=1&vpn=0&dnsfilter=1');
+			   	
+			   }"></i>
+			
+	
+
+	<i class="fa fa-spinner fa-2x fa-pulse text-primary hidden"></i>
+</div>
+<div id="cbip-table-28-internet"></div>
+</td>
+
+
+
+<td><div id="cbi-table-28-devinfo">
+
+
+	
+		<button class="btn btn-link" type="submit" onclick='cbi_show_modal(this, "/cgi-bin/luci/admin/network/devices/devinfo", "macaddr=C0:F8:53:E5:31:2B&hostname=SmartLife-312B&internet=1&vpn=0&dnsfilter=1");return false;' name="cbid.table.28.devinfo" value="" data-action="modal"><i class="fa fa-edit fa-lg"></i></button>
+		<button class="btn hidden btn-link" type="button" disabled=true><i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;</button>
+	
+</div>
+<div id="cbip-table-28-devinfo"></div>
+</td>
+
+
+
+</tr><tr id="cbi-table-29" ondragstart="drag_start(event);" ondragend="drag_end(event);" ondragenter="drag_enter(event);" ondragleave="drag_leave(event);" ondrop="drag_drop(event);" ondragover="drag_over(event);"  data-sid="29" data-store="cbi.sts.table.table">
+		<td class="hidden-xs"><div id="cbi-table-29-idx">
+
+
+
+
+	<p class="form-control-static hidden-xs">29</p>
+	<p class="visible-xs">29</p>
+
+
+</div>
+<div id="cbip-table-29-idx"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-29-hostname">
+
+
+
+
+	<p class="form-control-static hidden-xs">Redmi-Pad-SE-8-7<br /><span class="text-primary">Mesh</span></p>
+	<p class="visible-xs">Redmi-Pad-SE-8-7<br /><span class="text-primary">Mesh</span></p>
+
+
+</div>
+<div id="cbip-table-29-hostname"></div>
+</td>
+
+
+
+<td class="visible-xs"><div id="cbi-table-29-hostnamexs">
+
+
+
+
+	<p class="form-control-static hidden-xs">Redmi-Pad-SE-8-7<br />192.168.178.233</p>
+	<p class="visible-xs">Redmi-Pad-SE-8-7<br />192.168.178.233</p>
+
+
+</div>
+<div id="cbip-table-29-hostnamexs"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-29-icon">
+
+
+<div style="white-space:nowrap;"><span class="fa-2x"><i class="icon icon-none text-primary" aria-hidden="true"></i></span></div>
+</div>
+<div id="cbip-table-29-icon"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-29-ipmac">
+
+
+
+
+	<p class="form-control-static hidden-xs">192.168.178.233<br />16:51:5F:25:CD:6A</p>
+	<p class="visible-xs">192.168.178.233<br />16:51:5F:25:CD:6A</p>
+
+
+</div>
+<div id="cbip-table-29-ipmac"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-29-speed">
+
+
+
+
+	<p class="form-control-static hidden-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+	<p class="visible-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+
+
+</div>
+<div id="cbip-table-29-speed"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-29-signal">
+
+
+
+
+	<p class="form-control-static hidden-xs">-72 dBm</p>
+	<p class="visible-xs">-72 dBm</p>
+
+
+</div>
+<div id="cbip-table-29-signal"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-29-online">
+
+
+
+
+	<p class="form-control-static hidden-xs">09:29:20</p>
+	<p class="visible-xs">09:29:20</p>
+
+
+</div>
+<div id="cbip-table-29-online"></div>
+</td>
+
+
+
+<td><div id="cbi-table-29-internet">
+
+
+	<input type="hidden" value="1" name="cbi.cbe.table.29.internet" />
+	<input type="hidden" id="cbid.table.29.internet" name="cbid.table.29.internet" value="1" />
+
+	
+			<i class="fa fa-toggle-on  fa-2x text-primary" 
+			   onclick="if (this.classList.contains('fa-toggle-off')) { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=16:51:5F:25:CD:6A&hostname=Redmi-Pad-SE-8-7&internet=1&vpn=0&dnsfilter=1'); 
+			   	
+			   } else { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=16:51:5F:25:CD:6A&hostname=Redmi-Pad-SE-8-7&internet=1&vpn=0&dnsfilter=1');
+			   	
+			   }"></i>
+			
+	
+
+	<i class="fa fa-spinner fa-2x fa-pulse text-primary hidden"></i>
+</div>
+<div id="cbip-table-29-internet"></div>
+</td>
+
+
+
+<td><div id="cbi-table-29-devinfo">
+
+
+	
+		<button class="btn btn-link" type="submit" onclick='cbi_show_modal(this, "/cgi-bin/luci/admin/network/devices/devinfo", "macaddr=16:51:5F:25:CD:6A&hostname=Redmi-Pad-SE-8-7&internet=1&vpn=0&dnsfilter=1");return false;' name="cbid.table.29.devinfo" value="" data-action="modal"><i class="fa fa-edit fa-lg"></i></button>
+		<button class="btn hidden btn-link" type="button" disabled=true><i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;</button>
+	
+</div>
+<div id="cbip-table-29-devinfo"></div>
+</td>
+
+
+
+</tr><tr id="cbi-table-30" ondragstart="drag_start(event);" ondragend="drag_end(event);" ondragenter="drag_enter(event);" ondragleave="drag_leave(event);" ondrop="drag_drop(event);" ondragover="drag_over(event);"  data-sid="30" data-store="cbi.sts.table.table">
+		<td class="hidden-xs"><div id="cbi-table-30-idx">
+
+
+
+
+	<p class="form-control-static hidden-xs">30</p>
+	<p class="visible-xs">30</p>
+
+
+</div>
+<div id="cbip-table-30-idx"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-30-hostname">
+
+
+
+
+	<p class="form-control-static hidden-xs">roborock-vacuum-a15<br /><span class="text-primary">Mesh</span></p>
+	<p class="visible-xs">roborock-vacuum-a15<br /><span class="text-primary">Mesh</span></p>
+
+
+</div>
+<div id="cbip-table-30-hostname"></div>
+</td>
+
+
+
+<td class="visible-xs"><div id="cbi-table-30-hostnamexs">
+
+
+
+
+	<p class="form-control-static hidden-xs">roborock-vacuum-a15<br />192.168.178.236</p>
+	<p class="visible-xs">roborock-vacuum-a15<br />192.168.178.236</p>
+
+
+</div>
+<div id="cbip-table-30-hostnamexs"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-30-icon">
+
+
+<div style="white-space:nowrap;"><span class="fa-2x"><i class="icon icon-none text-primary" aria-hidden="true"></i></span></div>
+</div>
+<div id="cbip-table-30-icon"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-30-ipmac">
+
+
+
+
+	<p class="form-control-static hidden-xs">192.168.178.236<br />B0:4A:39:42:17:F0</p>
+	<p class="visible-xs">192.168.178.236<br />B0:4A:39:42:17:F0</p>
+
+
+</div>
+<div id="cbip-table-30-ipmac"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-30-speed">
+
+
+
+
+	<p class="form-control-static hidden-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+	<p class="visible-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+
+
+</div>
+<div id="cbip-table-30-speed"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-30-signal">
+
+
+
+
+	<p class="form-control-static hidden-xs">-57 dBm</p>
+	<p class="visible-xs">-57 dBm</p>
+
+
+</div>
+<div id="cbip-table-30-signal"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-30-online">
+
+
+
+
+	<p class="form-control-static hidden-xs">08:58:59</p>
+	<p class="visible-xs">08:58:59</p>
+
+
+</div>
+<div id="cbip-table-30-online"></div>
+</td>
+
+
+
+<td><div id="cbi-table-30-internet">
+
+
+	<input type="hidden" value="1" name="cbi.cbe.table.30.internet" />
+	<input type="hidden" id="cbid.table.30.internet" name="cbid.table.30.internet" value="1" />
+
+	
+			<i class="fa fa-toggle-on  fa-2x text-primary" 
+			   onclick="if (this.classList.contains('fa-toggle-off')) { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=B0:4A:39:42:17:F0&hostname=roborock-vacuum-a15&internet=1&vpn=0&dnsfilter=1'); 
+			   	
+			   } else { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=B0:4A:39:42:17:F0&hostname=roborock-vacuum-a15&internet=1&vpn=0&dnsfilter=1');
+			   	
+			   }"></i>
+			
+	
+
+	<i class="fa fa-spinner fa-2x fa-pulse text-primary hidden"></i>
+</div>
+<div id="cbip-table-30-internet"></div>
+</td>
+
+
+
+<td><div id="cbi-table-30-devinfo">
+
+
+	
+		<button class="btn btn-link" type="submit" onclick='cbi_show_modal(this, "/cgi-bin/luci/admin/network/devices/devinfo", "macaddr=B0:4A:39:42:17:F0&hostname=roborock-vacuum-a15&internet=1&vpn=0&dnsfilter=1");return false;' name="cbid.table.30.devinfo" value="" data-action="modal"><i class="fa fa-edit fa-lg"></i></button>
+		<button class="btn hidden btn-link" type="button" disabled=true><i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;</button>
+	
+</div>
+<div id="cbip-table-30-devinfo"></div>
+</td>
+
+
+
+</tr><tr id="cbi-table-31" ondragstart="drag_start(event);" ondragend="drag_end(event);" ondragenter="drag_enter(event);" ondragleave="drag_leave(event);" ondrop="drag_drop(event);" ondragover="drag_over(event);"  data-sid="31" data-store="cbi.sts.table.table">
+		<td class="hidden-xs"><div id="cbi-table-31-idx">
+
+
+
+
+	<p class="form-control-static hidden-xs">31</p>
+	<p class="visible-xs">31</p>
+
+
+</div>
+<div id="cbip-table-31-idx"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-31-hostname">
+
+
+
+
+	<p class="form-control-static hidden-xs">C120<br /><span class="text-primary">Mesh</span></p>
+	<p class="visible-xs">C120<br /><span class="text-primary">Mesh</span></p>
+
+
+</div>
+<div id="cbip-table-31-hostname"></div>
+</td>
+
+
+
+<td class="visible-xs"><div id="cbi-table-31-hostnamexs">
+
+
+
+
+	<p class="form-control-static hidden-xs">C120<br />192.168.178.248</p>
+	<p class="visible-xs">C120<br />192.168.178.248</p>
+
+
+</div>
+<div id="cbip-table-31-hostnamexs"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-31-icon">
+
+
+<div style="white-space:nowrap;"><span class="fa-2x"><i class="icon icon-none text-primary" aria-hidden="true"></i></span></div>
+</div>
+<div id="cbip-table-31-icon"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-31-ipmac">
+
+
+
+
+	<p class="form-control-static hidden-xs">192.168.178.248<br />3C:64:CF:F3:54:EF</p>
+	<p class="visible-xs">192.168.178.248<br />3C:64:CF:F3:54:EF</p>
+
+
+</div>
+<div id="cbip-table-31-ipmac"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-31-speed">
+
+
+
+
+	<p class="form-control-static hidden-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+	<p class="visible-xs"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 0.00 Kbps<br /><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 0.00 Kbps</p>
+
+
+</div>
+<div id="cbip-table-31-speed"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-31-signal">
+
+
+
+
+	<p class="form-control-static hidden-xs">-82 dBm</p>
+	<p class="visible-xs">-82 dBm</p>
+
+
+</div>
+<div id="cbip-table-31-signal"></div>
+</td>
+
+
+
+<td class="hidden-xs"><div id="cbi-table-31-online">
+
+
+
+
+	<p class="form-control-static hidden-xs">09:31:10</p>
+	<p class="visible-xs">09:31:10</p>
+
+
+</div>
+<div id="cbip-table-31-online"></div>
+</td>
+
+
+
+<td><div id="cbi-table-31-internet">
+
+
+	<input type="hidden" value="1" name="cbi.cbe.table.31.internet" />
+	<input type="hidden" id="cbid.table.31.internet" name="cbid.table.31.internet" value="1" />
+
+	
+			<i class="fa fa-toggle-on  fa-2x text-primary" 
+			   onclick="if (this.classList.contains('fa-toggle-off')) { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=3C:64:CF:F3:54:EF&hostname=C120&internet=1&vpn=0&dnsfilter=1'); 
+			   	
+			   } else { 
+			   	
+			   		cbi_switch_toggle(this, true, '/cgi-bin/luci/admin/network/devices/internet?macaddr=3C:64:CF:F3:54:EF&hostname=C120&internet=1&vpn=0&dnsfilter=1');
+			   	
+			   }"></i>
+			
+	
+
+	<i class="fa fa-spinner fa-2x fa-pulse text-primary hidden"></i>
+</div>
+<div id="cbip-table-31-internet"></div>
+</td>
+
+
+
+<td><div id="cbi-table-31-devinfo">
+
+
+	
+		<button class="btn btn-link" type="submit" onclick='cbi_show_modal(this, "/cgi-bin/luci/admin/network/devices/devinfo", "macaddr=3C:64:CF:F3:54:EF&hostname=C120&internet=1&vpn=0&dnsfilter=1");return false;' name="cbid.table.31.devinfo" value="" data-action="modal"><i class="fa fa-edit fa-lg"></i></button>
+		<button class="btn hidden btn-link" type="button" disabled=true><i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;</button>
+	
+</div>
+<div id="cbip-table-31-devinfo"></div>
+</td>
+
+
+
+</tr></tbody>
+</table>
+</div>
+<!-- /tblsection -->
+</div>
+</div>
+	<script type="text/javascript">
+		$("[data-toggle='popover']").popover();
+		cbi_d_update();
+		cbi_init_message("Do you want to leave this page? Your changes may not be saved.");
+	</script>
+</form>

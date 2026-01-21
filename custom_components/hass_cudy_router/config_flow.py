@@ -7,7 +7,13 @@ from typing import Any
 import voluptuous as vol
 
 from homeassistant import config_entries
-from homeassistant.const import CONF_HOST, CONF_PASSWORD, CONF_USERNAME, CONF_SCAN_INTERVAL
+from homeassistant.const import (
+    CONF_HOST,
+    CONF_PASSWORD,
+    CONF_PROTOCOL,
+    CONF_SCAN_INTERVAL,
+    CONF_USERNAME,
+)
 from homeassistant.core import HomeAssistant
 from homeassistant.data_entry_flow import FlowResult
 
@@ -16,22 +22,45 @@ from .router import CudyRouter
 
 _LOGGER = logging.getLogger(__name__)
 
+
 STEP_USER_DATA_SCHEMA = vol.Schema(
     {
+        vol.Required(CONF_PROTOCOL, default="http"): str,
         vol.Required(CONF_HOST, default="192.168.10.1"): str,
         vol.Required(CONF_USERNAME, default="admin"): str,
         vol.Required(CONF_PASSWORD): str,
     }
 )
 
+
+class InvalidAuth(Exception):
+    """Error to indicate there is invalid auth."""
+
+
+class CannotConnect(Exception):
+    """Error to indicate we cannot connect."""
+
+
 async def validate_input(hass: HomeAssistant, data: dict[str, Any]) -> dict[str, Any]:
     """Validate the user input allows us to connect."""
-    router = CudyRouter(hass, data[CONF_HOST], data[CONF_USERNAME], data[CONF_PASSWORD])
-    
-    if not await hass.async_add_executor_job(router.authenticate):
+    router = CudyRouter(
+        hass,
+        data[CONF_PROTOCOL],
+        data[CONF_HOST],
+        data[CONF_USERNAME],
+        data[CONF_PASSWORD],
+    )
+
+    try:
+        ok = await hass.async_add_executor_job(router.authenticate)
+    except OSError as err:
+        raise CannotConnect from err
+
+    if not ok:
         raise InvalidAuth
 
     return {"title": f"Cudy Router ({data[CONF_HOST]})"}
+
 
 class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     """Handle a config flow for Cudy Router."""
@@ -41,41 +70,45 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     async def async_step_user(
         self, user_input: dict[str, Any] | None = None
     ) -> FlowResult:
-        """Handle the initial step."""
         errors: dict[str, str] = {}
+
         if user_input is not None:
             try:
                 info = await validate_input(self.hass, user_input)
             except InvalidAuth:
                 errors["base"] = "invalid_auth"
+            except CannotConnect:
+                errors["base"] = "cannot_connect"
             except Exception:
                 _LOGGER.exception("Unexpected exception")
                 errors["base"] = "unknown"
             else:
-                return self.async_create_entry(title=info["title"], data=user_input)
+                return self.async_create_entry(
+                    title=info["title"], data=user_input
+                )
 
         return self.async_show_form(
-            step_id="user", data_schema=STEP_USER_DATA_SCHEMA, errors=errors
+            step_id="user",
+            data_schema=STEP_USER_DATA_SCHEMA,
+            errors=errors,
         )
 
     @staticmethod
     def async_get_options_flow(
         config_entry: config_entries.ConfigEntry,
     ) -> config_entries.OptionsFlow:
-        """Create the options flow."""
         return OptionsFlowHandler(config_entry)
+
 
 class OptionsFlowHandler(config_entries.OptionsFlow):
     """Handle options."""
 
     def __init__(self, config_entry: config_entries.ConfigEntry) -> None:
-        """Initialize options flow."""
         self.config_entry = config_entry
 
     async def async_step_init(
         self, user_input: dict[str, Any] | None = None
     ) -> FlowResult:
-        """Manage the options."""
         if user_input is not None:
             return self.async_create_entry(title="", data=user_input)
 
@@ -94,6 +127,3 @@ class OptionsFlowHandler(config_entries.OptionsFlow):
                 }
             ),
         )
-
-class InvalidAuth(Exception):
-    """Error to indicate there is invalid auth."""

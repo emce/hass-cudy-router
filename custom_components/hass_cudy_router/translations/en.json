@@ -1,0 +1,95 @@
+{
+  "title": "Cudy Router",
+
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configure Cudy Router",
+        "description": "Enter connection details for your Cudy router."
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid username or password.",
+      "cannot_connect": "Unable to connect to the router.",
+      "unknown": "Unexpected error occurred."
+    }
+  },
+
+  "options": {
+    "step": {
+      "init": {
+        "title": "Cudy Router Options",
+        "description": "Configure polling interval and tracked devices."
+      }
+    }
+  },
+
+  "entity": {
+    "sensor": {
+      "firmware_version": {
+        "name": "Firmware version"
+      },
+      "system_uptime": {
+        "name": "Connected time"
+      },
+      "mesh_network": {
+        "name": "Mesh network"
+      },
+      "mesh_units": {
+        "name": "Mesh units"
+      },
+      "wan_public_ip": {
+        "name": "WAN public IP address"
+      },
+      "wan_ip": {
+        "name": "WAN IP address"
+      },
+      "wan_dns": {
+        "name": "WAN DNS addresses"
+      },
+      "wan_type": {
+        "name": "Connection type"
+      },
+      "wan_uptime": {
+        "name": "WAN connected time"
+      },
+      "wan_download_speed": {
+        "name": "WAN download speed"
+      },
+      "wan_upload_speed": {
+        "name": "WAN upload speed"
+      },
+      "lan_ip": {
+        "name": "LAN IP address"
+      },
+      "device_count": {
+        "name": "Total devices connected"
+      },
+      "wifi_24_device_count": {
+        "name": "2.4 GHz Wi-Fi devices connected"
+      },
+      "wifi_5_device_count": {
+        "name": "5 GHz Wi-Fi devices connected"
+      },
+      "wired_device_count": {
+        "name": "Wired devices connected"
+      },
+      "mesh_device_count": {
+        "name": "Mesh devices connected"
+      }
+    },
+
+    "button": {
+      "reboot": {
+        "name": "Reboot router"
+      }
+    }
+  },
+
+  "services": {
+    "reboot": {
+      "name": "Reboot router",
+      "description": "Reboot the Cudy router."
+    }
+  }
+}
