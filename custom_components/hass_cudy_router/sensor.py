@@ -73,7 +73,7 @@ SENSOR_TYPES: tuple[CudySensorEntityDescription, ...] = (
         icon="mdi:devices",
         state_class=SensorStateClass.MEASUREMENT,
         module=MODULE_SYSTEM,
-        value_fn=lambda data: _value_or_dict_value(data.get(SENSOR_MESH_UNITS)),
+        value_fn=lambda data: data.get(SENSOR_MESH_UNITS),
     ),
     # ----- WAN -----
     CudySensorEntityDescription(
